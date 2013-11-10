@@ -1,128 +1,104 @@
-#
-#  There exist several targets which are by default empty and which can be 
-#  used for execution of your targets. These targets are usually executed 
-#  before and after some main targets. They are: 
-#
-#     .build-pre:              called before 'build' target
-#     .build-post:             called after 'build' target
-#     .clean-pre:              called before 'clean' target
-#     .clean-post:             called after 'clean' target
-#     .clobber-pre:            called before 'clobber' target
-#     .clobber-post:           called after 'clobber' target
-#     .all-pre:                called before 'all' target
-#     .all-post:               called after 'all' target
-#     .help-pre:               called before 'help' target
-#     .help-post:              called after 'help' target
-#
-#  Targets beginning with '.' are not intended to be called on their own.
-#
-#  Main targets can be executed directly, and they are:
-#  
-#     build                    build a specific configuration
-#     clean                    remove built files from a configuration
-#     clobber                  remove all built files
-#     all                      build all configurations
-#     help                     print help mesage
-#  
-#  Targets .build-impl, .clean-impl, .clobber-impl, .all-impl, and
-#  .help-impl are implemented in nbproject/makefile-impl.mk.
-#
-#  Available make variables:
-#
-#     CND_BASEDIR                base directory for relative paths
-#     CND_DISTDIR                default top distribution directory (build artifacts)
-#     CND_BUILDDIR               default top build directory (object files, ...)
-#     CONF                       name of current configuration
-#     CND_PLATFORM_${CONF}       platform name (current configuration)
-#     CND_ARTIFACT_DIR_${CONF}   directory of build artifact (current configuration)
-#     CND_ARTIFACT_NAME_${CONF}  name of build artifact (current configuration)
-#     CND_ARTIFACT_PATH_${CONF}  path to build artifact (current configuration)
-#     CND_PACKAGE_DIR_${CONF}    directory of package (current configuration)
-#     CND_PACKAGE_NAME_${CONF}   name of package (current configuration)
-#     CND_PACKAGE_PATH_${CONF}   path to package (current configuration)
-#
-# NOCDDL
+ANGEL_DISABLE_FMOD := $(shell sed -rn 's/^[[:space:]]*\#define[[:space:]]+ANGEL_DISABLE_FMOD[[:space:]]+([[:digit:]])[[:space:]]*$$/\1/p' Angel/AngelConfig.h)
+ANGEL_DISABLE_DEVIL := $(shell sed -rn 's/^[[:space:]]*\#define[[:space:]]+ANGEL_DISABLE_DEVIL[[:space:]]+([[:digit:]])[[:space:]]*$$/\1/p' Angel/AngelConfig.h)
+CXX = g++
+TARGET = TowerDefense
+ANGEL_FLAGS = -D ANGEL_RELEASE
+ARCH := $(shell uname -m)
+ALLEGRO_LIBS := $(shell allegro-config --libs 2>/dev/null)
+CWD := $(shell pwd)
+CODE_DIR := $(shell dirname "$(CWD)")
+LIBANGEL = Angel/libangel.a
+LUA = Angel/Libraries/angel-lua-build/lua
+WRAPPER = Angel/Scripting/Interfaces/AngelLuaWrapping.cpp
 
+INCLUDE = 							\
+	-I.							\
+	-I./Game						\
+	-I./Angel						\
+	-I./Angel/Libraries/glfw-3.0.3/include			\
+	-I./Angel/Libraries/Box2D-2.2.1			\
+	-I./Angel/Libraries/FTGL/include			\
+	-I./Angel/Libraries/lua-5.2.1/src			\
+	-I/usr/include/freetype2
+ifneq ($(ANGEL_DISABLE_FMOD),1)
+	INCLUDE += -I./Angel/Libraries/FMOD/inc
+endif
 
-# Environment 
-MKDIR=mkdir
-CP=cp
-CCADMIN=CCadmin
+LIBS = 									\
+	$(LIBANGEL)							\
+	./Angel/Libraries/glfw-3.0.3/src/libglfw3.a			\
+	./Angel/Libraries/Box2D-2.2.1/Build/Box2D/libBox2D.a		\
+	./Angel/Libraries/FTGL/unix/src/.libs/libftgl.a		\
+	./Angel/Libraries/gwen/lib/linux/gmake/libgwen_static.a	\
+	./Angel/Libraries/angel-lua-build/liblua.a
 
+ifneq ($(ANGEL_DISABLE_FMOD),1)
+	ifeq ($(ARCH),x86_64)
+		LIBS += ./Angel/Libraries/FMOD/lib/libfmodex64.so
+	else
+		LIBS += ./Angel/Libraries/FMOD/lib/libfmodex.so
+	endif
+endif
 
-# build
-build: .build-post
+SHLIBS = -lGL -lGLU -ldl -lfreetype -lXrandr -lX11 -lpthread -lrt -lXxf86vm -lXi
+SHLIBS += $(ALLEGRO_LIBS)
+ifeq ($(ANGEL_DISABLE_FMOD),1)
+	SHLIBS += -lopenal -lvorbisfile
+endif
+ifneq ($(ANGEL_DISABLE_DEVIL),1)
+	SHLIBS += -lIL -lILU -lILUT
+else
+	SHLIBS += -lpng
+endif
 
-.build-pre:
-# Add your pre 'build' code here...
+SYSSRCS = 							\
+	$(WRAPPER)
 
-.build-post: .build-impl
-# Add your post 'build' code here...
+SRCS =								\
+	GameApp.cpp					\
+	Game/Castle.cpp			\
+	Game/Characteristics.cpp			\
+	Game/Deceleration.cpp	\
+	Game/Effect.cpp			\
+	Game/Enemy.cpp			\
+	Game/Lair.cpp	\
+	Game/Landscape.cpp			\
+	Game/Level.cpp		\
+	Game/Tower.cpp			\
+	Game/TowerMagic.cpp		\
+	Game/Point.cpp			\
+	Game/Poisoning.cpp		\
+	Game/Square.cpp		\
+	Game/TowerStandart.cpp			\
+	Game/Trap.cpp			\
+	Game/Weakness.cpp			\
+	stdafx.cpp						\
+	Main.cpp
 
+SYSOBJS = $(patsubst %.cpp,%.o,$(SYSSRCS))
+OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 
-# clean
-clean: .clean-post
+.PHONY: clean all SWIG-Wrapper
 
-.clean-pre:
-# Add your pre 'clean' code here...
+%.o: %.cpp
+	$(CXX) -c $(INCLUDE) -Wno-write-strings -Wno-deprecated -o $@ $^
 
-.clean-post: .clean-impl
-# Add your post 'clean' code here...
+all: $(TARGET)
 
+publish: $(TARGET)
+	$(LUA) Tools/BuildScripts/publish_linux.lua -i $(CWD) -e $(TARGET) -g TowerDefense
 
-# clobber
-clobber: .clobber-post
+SWIG-Wrapper:
+	$(LUA) Tools/BuildScripts/swig_wrap.lua -p "$(CODE_DIR)" -D TOWERDEFENSE
 
-.clobber-pre:
-# Add your pre 'clobber' code here...
+$(WRAPPER): SWIG-Wrapper
 
-.clobber-post: .clobber-impl
-# Add your post 'clobber' code here...
+$(TARGET): $(LIBANGEL) $(OBJS) $(SYSOBJS) $(WRAPPER)
+	$(CXX) -o $@ $(OBJS) $(SYSOBJS) $(LIBS) $(SHLIBS) $(ANGEL_FLAGS)
+	cp -p Angel/Scripting/EngineScripts/*.lua Resources/Scripts
 
+clean:
+	rm -f $(OBJS) $(SYSOBJS) $(TARGET) $(WRAPPER) 
 
-# all
-all: .all-post
-
-.all-pre:
-# Add your pre 'all' code here...
-
-.all-post: .all-impl
-# Add your post 'all' code here...
-
-
-# build tests
-build-tests: .build-tests-post
-
-.build-tests-pre:
-# Add your pre 'build-tests' code here...
-
-.build-tests-post: .build-tests-impl
-# Add your post 'build-tests' code here...
-
-
-# run tests
-test: .test-post
-
-.test-pre: build-tests
-# Add your pre 'test' code here...
-
-.test-post: .test-impl
-# Add your post 'test' code here...
-
-
-# help
-help: .help-post
-
-.help-pre:
-# Add your pre 'help' code here...
-
-.help-post: .help-impl
-# Add your post 'help' code here...
-
-
-
-# include project implementation makefile
-include nbproject/Makefile-impl.mk
-
-# include project make variables
-include nbproject/Makefile-variables.mk
+$(LIBANGEL):
+	cd Angel && make

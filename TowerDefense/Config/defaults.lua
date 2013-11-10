@@ -1,0 +1,3 @@
+WindowSettings = {
+	name = "Tower Defense",
+}
