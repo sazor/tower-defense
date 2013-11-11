@@ -51,3 +51,12 @@ int Castle::getHealth() const
 bool Castle::change_position(Point){
 	
 }
+
+void Castle::Render()
+{
+    Actor::Render();
+}
+
+void Castle::ReceiveMessage(Message *message){
+
+}

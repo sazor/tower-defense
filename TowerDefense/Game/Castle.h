@@ -2,8 +2,9 @@
 #define	CASTLE_H
 #include "Tower.h"
 #include "Point.h"
+#include "GameApp.h"
 
-class Castle{
+class Castle : public Actor{
 public:
     Castle();
     Castle(const Castle& orig);
@@ -19,8 +20,11 @@ public:
     int getMax_health() const;
     void setHealth(int health);
     int getHealth() const;
+    virtual void ReceiveMessage(Message *message);
+    virtual void Render();
 private:
     int health, max_health, cash;
+    bool rendered;
 };
 
 #endif	/* CASTLE_H */

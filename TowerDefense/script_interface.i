@@ -36,6 +36,11 @@ class Lair : public Actor
 {
 public:
 	Lair();
-	void Lair::release_enemy(Vector2 vec);
+	void Lair::release_enemy();
+};
+class Castle : public Actor
+{
+public:
+	Castle();
 };
 #endif

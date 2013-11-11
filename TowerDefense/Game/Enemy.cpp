@@ -15,6 +15,7 @@ Enemy::Enemy(){
     SetColor(1, 0, 0);
     SetSize(0.75f);
     SetDrawShape(ADS_Circle);
+    speed = 3.0f;
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
@@ -23,14 +24,18 @@ Enemy::Enemy(){
 }
 
 Enemy::Enemy(Vector2 pos){
+    //Params
     SetColor(1, 0, 0);
     SetSize(0.75f);
     SetPosition(pos);
     SetDrawShape(ADS_Circle);
+    speed = 3.0f;
+    //Events
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
     theWorld.Add(this, 2);
+    //GoToCastle
     Vector2 aim = Vector2(-9.29f,0.71f);
     GoTo(aim);
 }
@@ -106,47 +111,47 @@ void Enemy::GetToNextPoint()
     Vector2 next = _pathPoints[++_pathIndex];
     float distance = Vector2::Distance(_position, next);
     //Want this guy to move at a constant rate of 8.0 units per second
-    float time = distance / 8.0f;
+    float time = distance / speed;
     MoveTo(next, time, false, "PathPointReached");
 }
 
 
-void Enemy::setSpeed(int speed)
+void Enemy::setSpeed(float speed)
 {
     this->speed = speed;
 }
 
-int Enemy::getSpeed() const
+float Enemy::getSpeed() const
 {
     return speed;
 }
 
-void Enemy::setCash(int cash)
+void Enemy::setCash(float cash)
 {
     this->cash = cash;
 }
 
-int Enemy::getCash() const
+float Enemy::getCash() const
 {
     return cash;
 }
 
-void Enemy::setMax_health(int max_health)
+void Enemy::setMax_health(float max_health)
 {
     this->max_health = max_health;
 }
 
-int Enemy::getMax_health() const
+float Enemy::getMax_health() const
 {
     return max_health;
 }
 
-void Enemy::setHeath(int heath)
+void Enemy::setHeath(float heath)
 {
     this->heath = heath;
 }
 
-int Enemy::getHeath() const
+float Enemy::getHeath() const
 {
     return heath;
 }

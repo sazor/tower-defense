@@ -1638,65 +1638,66 @@ SWIG_Lua_dostring(lua_State *L, const char* str) {
 #define SWIGTYPE_p_AngelSampleHandle swig_types[2]
 #define SWIGTYPE_p_AngelSoundHandle swig_types[3]
 #define SWIGTYPE_p_Camera swig_types[4]
-#define SWIGTYPE_p_Color swig_types[5]
-#define SWIGTYPE_p_CompoundLog swig_types[6]
-#define SWIGTYPE_p_Console swig_types[7]
-#define SWIGTYPE_p_ConsoleLog swig_types[8]
-#define SWIGTYPE_p_Controller swig_types[9]
-#define SWIGTYPE_p_ControllerInput swig_types[10]
-#define SWIGTYPE_p_ControllerManager swig_types[11]
-#define SWIGTYPE_p_DeveloperLog swig_types[12]
-#define SWIGTYPE_p_Enemy swig_types[13]
-#define SWIGTYPE_p_FileLog swig_types[14]
-#define SWIGTYPE_p_FullScreenActor swig_types[15]
-#define SWIGTYPE_p_GLint swig_types[16]
-#define SWIGTYPE_p_GestureData swig_types[17]
-#define SWIGTYPE_p_GridActor swig_types[18]
-#define SWIGTYPE_p_Lair swig_types[19]
-#define SWIGTYPE_p_MathUtil swig_types[20]
-#define SWIGTYPE_p_Message swig_types[21]
-#define SWIGTYPE_p_MessageListener swig_types[22]
-#define SWIGTYPE_p_MouseListener swig_types[23]
-#define SWIGTYPE_p_ParticleActor swig_types[24]
-#define SWIGTYPE_p_PhysicsActor swig_types[25]
-#define SWIGTYPE_p_Preferences swig_types[26]
-#define SWIGTYPE_p_Renderable swig_types[27]
-#define SWIGTYPE_p_SoundDevice swig_types[28]
-#define SWIGTYPE_p_Switchboard swig_types[29]
-#define SWIGTYPE_p_SystemLog swig_types[30]
-#define SWIGTYPE_p_TagCollection swig_types[31]
-#define SWIGTYPE_p_TextActor swig_types[32]
-#define SWIGTYPE_p_Touch swig_types[33]
-#define SWIGTYPE_p_TouchListener swig_types[34]
-#define SWIGTYPE_p_Tuning swig_types[35]
-#define SWIGTYPE_p_TypedMessageT_Vec2i_t swig_types[36]
-#define SWIGTYPE_p_TypedMessageT_Vec2ui_t swig_types[37]
-#define SWIGTYPE_p_TypedMessageT_Vec3i_t swig_types[38]
-#define SWIGTYPE_p_TypedMessageT_Vec3ui_t swig_types[39]
-#define SWIGTYPE_p_TypedMessageT_Vector2_t swig_types[40]
-#define SWIGTYPE_p_TypedMessageT_Vector3_t swig_types[41]
-#define SWIGTYPE_p_TypedMessageT_float_t swig_types[42]
-#define SWIGTYPE_p_TypedMessageT_int_t swig_types[43]
-#define SWIGTYPE_p_TypedMessageT_std__string_t swig_types[44]
-#define SWIGTYPE_p_Vec2i swig_types[45]
-#define SWIGTYPE_p_Vec2ui swig_types[46]
-#define SWIGTYPE_p_Vec3i swig_types[47]
-#define SWIGTYPE_p_Vec3ui swig_types[48]
-#define SWIGTYPE_p_Vector2 swig_types[49]
-#define SWIGTYPE_p_Vector2List swig_types[50]
-#define SWIGTYPE_p_Vector3 swig_types[51]
-#define SWIGTYPE_p_World swig_types[52]
-#define SWIGTYPE_p_std__setT_Actor_p_t swig_types[53]
-#define SWIGTYPE_p_std__setT_MessageListener_p_t swig_types[54]
-#define SWIGTYPE_p_std__setT_std__string_t swig_types[55]
-#define SWIGTYPE_p_std__string swig_types[56]
-#define SWIGTYPE_p_std__vectorT_Actor_p_t swig_types[57]
-#define SWIGTYPE_p_std__vectorT_Touch_p_t swig_types[58]
-#define SWIGTYPE_p_std__vectorT_Vec3ui_t swig_types[59]
-#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[60]
-#define SWIGTYPE_p_void swig_types[61]
-static swig_type_info *swig_types[63];
-static swig_module_info swig_module = {swig_types, 62, 0, 0, 0, 0};
+#define SWIGTYPE_p_Castle swig_types[5]
+#define SWIGTYPE_p_Color swig_types[6]
+#define SWIGTYPE_p_CompoundLog swig_types[7]
+#define SWIGTYPE_p_Console swig_types[8]
+#define SWIGTYPE_p_ConsoleLog swig_types[9]
+#define SWIGTYPE_p_Controller swig_types[10]
+#define SWIGTYPE_p_ControllerInput swig_types[11]
+#define SWIGTYPE_p_ControllerManager swig_types[12]
+#define SWIGTYPE_p_DeveloperLog swig_types[13]
+#define SWIGTYPE_p_Enemy swig_types[14]
+#define SWIGTYPE_p_FileLog swig_types[15]
+#define SWIGTYPE_p_FullScreenActor swig_types[16]
+#define SWIGTYPE_p_GLint swig_types[17]
+#define SWIGTYPE_p_GestureData swig_types[18]
+#define SWIGTYPE_p_GridActor swig_types[19]
+#define SWIGTYPE_p_Lair swig_types[20]
+#define SWIGTYPE_p_MathUtil swig_types[21]
+#define SWIGTYPE_p_Message swig_types[22]
+#define SWIGTYPE_p_MessageListener swig_types[23]
+#define SWIGTYPE_p_MouseListener swig_types[24]
+#define SWIGTYPE_p_ParticleActor swig_types[25]
+#define SWIGTYPE_p_PhysicsActor swig_types[26]
+#define SWIGTYPE_p_Preferences swig_types[27]
+#define SWIGTYPE_p_Renderable swig_types[28]
+#define SWIGTYPE_p_SoundDevice swig_types[29]
+#define SWIGTYPE_p_Switchboard swig_types[30]
+#define SWIGTYPE_p_SystemLog swig_types[31]
+#define SWIGTYPE_p_TagCollection swig_types[32]
+#define SWIGTYPE_p_TextActor swig_types[33]
+#define SWIGTYPE_p_Touch swig_types[34]
+#define SWIGTYPE_p_TouchListener swig_types[35]
+#define SWIGTYPE_p_Tuning swig_types[36]
+#define SWIGTYPE_p_TypedMessageT_Vec2i_t swig_types[37]
+#define SWIGTYPE_p_TypedMessageT_Vec2ui_t swig_types[38]
+#define SWIGTYPE_p_TypedMessageT_Vec3i_t swig_types[39]
+#define SWIGTYPE_p_TypedMessageT_Vec3ui_t swig_types[40]
+#define SWIGTYPE_p_TypedMessageT_Vector2_t swig_types[41]
+#define SWIGTYPE_p_TypedMessageT_Vector3_t swig_types[42]
+#define SWIGTYPE_p_TypedMessageT_float_t swig_types[43]
+#define SWIGTYPE_p_TypedMessageT_int_t swig_types[44]
+#define SWIGTYPE_p_TypedMessageT_std__string_t swig_types[45]
+#define SWIGTYPE_p_Vec2i swig_types[46]
+#define SWIGTYPE_p_Vec2ui swig_types[47]
+#define SWIGTYPE_p_Vec3i swig_types[48]
+#define SWIGTYPE_p_Vec3ui swig_types[49]
+#define SWIGTYPE_p_Vector2 swig_types[50]
+#define SWIGTYPE_p_Vector2List swig_types[51]
+#define SWIGTYPE_p_Vector3 swig_types[52]
+#define SWIGTYPE_p_World swig_types[53]
+#define SWIGTYPE_p_std__setT_Actor_p_t swig_types[54]
+#define SWIGTYPE_p_std__setT_MessageListener_p_t swig_types[55]
+#define SWIGTYPE_p_std__setT_std__string_t swig_types[56]
+#define SWIGTYPE_p_std__string swig_types[57]
+#define SWIGTYPE_p_std__vectorT_Actor_p_t swig_types[58]
+#define SWIGTYPE_p_std__vectorT_Touch_p_t swig_types[59]
+#define SWIGTYPE_p_std__vectorT_Vec3ui_t swig_types[60]
+#define SWIGTYPE_p_std__vectorT_std__string_t swig_types[61]
+#define SWIGTYPE_p_void swig_types[62]
+static swig_type_info *swig_types[64];
+static swig_module_info swig_module = {swig_types, 63, 0, 0, 0, 0};
 #define SWIG_TypeQuery(name) SWIG_TypeQueryModule(&swig_module, &swig_module, name)
 #define SWIG_MangledTypeQuery(name) SWIG_MangledTypeQueryModule(&swig_module, &swig_module, name)
 
@@ -1802,6 +1803,7 @@ SWIGINTERN int SWIG_lua_isnilstring(lua_State *L, int idx) {
 //  (the central wrapping file). 
 #include "../../../TowerDefense/Game/Enemy.h"
 #include "../../../TowerDefense/Game/Lair.h"
+#include "../../../TowerDefense/Game/Castle.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -5868,15 +5870,6 @@ static int _wrap_Message_GetSender(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      Enemy *dobj = dynamic_cast<Enemy *>(result);
-      if (dobj) {
-        dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Enemy, 0); SWIG_arg++;
-      }   
-    }/*@SWIG@*/
-    
-    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
-    if (!dcast) {
       Lair *dobj = dynamic_cast<Lair *>(result);
       if (dobj) {
         dcast = 1;
@@ -5886,10 +5879,10 @@ static int _wrap_Message_GetSender(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      Enemy *dobj = dynamic_cast<Enemy *>(result);
       if (dobj) {
         dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Enemy, 0); SWIG_arg++;
       }   
     }/*@SWIG@*/
     
@@ -5904,10 +5897,28 @@ static int _wrap_Message_GetSender(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
+      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
       PhysicsActor *dobj = dynamic_cast<PhysicsActor *>(result);
       if (dobj) {
         dcast = 1;
         SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_PhysicsActor, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
+      Castle *dobj = dynamic_cast<Castle *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Castle, 0); SWIG_arg++;
       }   
     }/*@SWIG@*/
     
@@ -5930,6 +5941,8 @@ static int _wrap_Message_GetSender(lua_State* L) {
     }/*@SWIG@*/
     
     
+    
+    /*@SWIG@*/
     
     /*@SWIG@*/
     
@@ -15319,6 +15332,15 @@ static int _wrap_new_Actor(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
+      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 1); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
       Lair *dobj = dynamic_cast<Lair *>(result);
       if (dobj) {
         dcast = 1;
@@ -15337,10 +15359,19 @@ static int _wrap_new_Actor(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
         dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 1); SWIG_arg++;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 1); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
+      Castle *dobj = dynamic_cast<Castle *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Castle, 1); SWIG_arg++;
       }   
     }/*@SWIG@*/
     
@@ -15355,15 +15386,6 @@ static int _wrap_new_Actor(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      Camera *dobj = dynamic_cast<Camera *>(result);
-      if (dobj) {
-        dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 1); SWIG_arg++;
-      }   
-    }/*@SWIG@*/
-    
-    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
-    if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
         dcast = 1;
@@ -15372,6 +15394,8 @@ static int _wrap_new_Actor(lua_State* L) {
     }/*@SWIG@*/
     
     
+    
+    /*@SWIG@*/
     
     /*@SWIG@*/
     
@@ -19190,6 +19214,15 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
+      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
       Lair *dobj = dynamic_cast<Lair *>(result);
       if (dobj) {
         dcast = 1;
@@ -19208,10 +19241,19 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
         dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
+      Castle *dobj = dynamic_cast<Castle *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Castle, 0); SWIG_arg++;
       }   
     }/*@SWIG@*/
     
@@ -19226,15 +19268,6 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      Camera *dobj = dynamic_cast<Camera *>(result);
-      if (dobj) {
-        dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 0); SWIG_arg++;
-      }   
-    }/*@SWIG@*/
-    
-    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
-    if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
         dcast = 1;
@@ -19243,6 +19276,8 @@ static int _wrap_Actor_GetNamed(lua_State* L) {
     }/*@SWIG@*/
     
     
+    
+    /*@SWIG@*/
     
     /*@SWIG@*/
     
@@ -19459,6 +19494,15 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
+      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
       Lair *dobj = dynamic_cast<Lair *>(result);
       if (dobj) {
         dcast = 1;
@@ -19477,10 +19521,19 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      FullScreenActor *dobj = dynamic_cast<FullScreenActor *>(result);
+      Camera *dobj = dynamic_cast<Camera *>(result);
       if (dobj) {
         dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_FullScreenActor, 0); SWIG_arg++;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 0); SWIG_arg++;
+      }   
+    }/*@SWIG@*/
+    
+    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
+    if (!dcast) {
+      Castle *dobj = dynamic_cast<Castle *>(result);
+      if (dobj) {
+        dcast = 1;
+        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Castle, 0); SWIG_arg++;
       }   
     }/*@SWIG@*/
     
@@ -19495,15 +19548,6 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
     
     /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
     if (!dcast) {
-      Camera *dobj = dynamic_cast<Camera *>(result);
-      if (dobj) {
-        dcast = 1;
-        SWIG_NewPointerObj(L, dobj, SWIGTYPE_p_Camera, 0); SWIG_arg++;
-      }   
-    }/*@SWIG@*/
-    
-    /*@SWIG:/usr/share/swig2.0/typemaps/swigmacros.swg,192,%_formacro_1@*//*@SWIG:/usr/share/swig2.0/lua/factory.i,7,%_factory_dispatch@*/ 
-    if (!dcast) {
       ParticleActor *dobj = dynamic_cast<ParticleActor *>(result);
       if (dobj) {
         dcast = 1;
@@ -19512,6 +19556,8 @@ static int _wrap_Actor_GetSelf(lua_State* L) {
     }/*@SWIG@*/
     
     
+    
+    /*@SWIG@*/
     
     /*@SWIG@*/
     
@@ -23211,39 +23257,15 @@ fail:
 static int _wrap_Lair_release_enemy(lua_State* L) {
   int SWIG_arg = 0;
   Lair *arg1 = (Lair *) 0 ;
-  Vector2 arg2 ;
   
-  SWIG_check_num_args("Lair::release_enemy",2,2)
+  SWIG_check_num_args("Lair::release_enemy",1,1)
   if(!SWIG_isptrtype(L,1)) SWIG_fail_arg("Lair::release_enemy",1,"Lair *");
   
   if (!SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&arg1,SWIGTYPE_p_Lair,0))){
     SWIG_fail_ptr("Lair_release_enemy",1,SWIGTYPE_p_Lair);
   }
   
-  {
-    // Vector2 conversion
-    Vector2 *vec;
-    if (SWIG_IsOK(SWIG_ConvertPtr(L,2,(void**)&vec,SWIGTYPE_p_Vector2,0))) 
-    {
-      arg2 = *vec;
-    }
-    else
-    {
-      // convert table parameters to floats
-      lua_pushinteger(L, 1);
-      lua_gettable(L, 2);
-      float x = lua_tonumber(L, -1);
-      lua_pop(L, 1);
-      lua_pushinteger(L, 2);
-      lua_gettable(L, 2);
-      float y = lua_tonumber(L, -1);
-      lua_pop(L, 1);
-      
-      // build the vector
-      arg2 = Vector2(x, y);
-    }
-  }
-  (arg1)->release_enemy(arg2);
+  (arg1)->release_enemy();
   
   return SWIG_arg;
   
@@ -23269,6 +23291,37 @@ static swig_lua_attribute swig_Lair_attributes[] = {
 static swig_lua_class *swig_Lair_bases[] = {0,0};
 static const char *swig_Lair_base_names[] = {"Actor *",0};
 static swig_lua_class _wrap_class_Lair = { "Lair", &SWIGTYPE_p_Lair,_wrap_new_Lair, swig_delete_Lair, swig_Lair_methods, swig_Lair_attributes, swig_Lair_bases, swig_Lair_base_names };
+
+static int _wrap_new_Castle(lua_State* L) {
+  int SWIG_arg = 0;
+  Castle *result = 0 ;
+  
+  SWIG_check_num_args("Castle::Castle",0,0)
+  result = (Castle *)new Castle();
+  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Castle,1); SWIG_arg++; 
+  return SWIG_arg;
+  
+  if(0) SWIG_fail;
+  
+fail:
+  lua_error(L);
+  return SWIG_arg;
+}
+
+
+static void swig_delete_Castle(void *obj) {
+Castle *arg1 = (Castle *) obj;
+delete arg1;
+}
+static swig_lua_method swig_Castle_methods[] = {
+    {0,0}
+};
+static swig_lua_attribute swig_Castle_attributes[] = {
+    {0,0,0}
+};
+static swig_lua_class *swig_Castle_bases[] = {0,0};
+static const char *swig_Castle_base_names[] = {"Actor *",0};
+static swig_lua_class _wrap_class_Castle = { "Castle", &SWIGTYPE_p_Castle,_wrap_new_Castle, swig_delete_Castle, swig_Castle_methods, swig_Castle_attributes, swig_Castle_bases, swig_Castle_base_names };
 
 #ifdef __cplusplus
 }
@@ -23390,6 +23443,9 @@ static swig_lua_const_info swig_constants[] = {
 static void *_p_TextActorTo_p_Renderable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Renderable *) (Actor *) ((TextActor *) x));
 }
+static void *_p_CastleTo_p_Renderable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Renderable *) (Actor *) ((Castle *) x));
+}
 static void *_p_ActorTo_p_Renderable(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Renderable *)  ((Actor *) x));
 }
@@ -23428,6 +23484,9 @@ static void *_p_SystemLogTo_p_DeveloperLog(void *x, int *SWIGUNUSEDPARM(newmemor
 }
 static void *_p_TextActorTo_p_Actor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Actor *)  ((TextActor *) x));
+}
+static void *_p_CastleTo_p_Actor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((Actor *)  ((Castle *) x));
 }
 static void *_p_FullScreenActorTo_p_Actor(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((Actor *)  ((FullScreenActor *) x));
@@ -23477,6 +23536,9 @@ static void *_p_TypedMessageT_Vec3i_tTo_p_Message(void *x, int *SWIGUNUSEDPARM(n
 static void *_p_TextActorTo_p_MessageListener(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((MessageListener *) (Actor *) ((TextActor *) x));
 }
+static void *_p_CastleTo_p_MessageListener(void *x, int *SWIGUNUSEDPARM(newmemory)) {
+    return (void *)((MessageListener *) (Actor *) ((Castle *) x));
+}
 static void *_p_ActorTo_p_MessageListener(void *x, int *SWIGUNUSEDPARM(newmemory)) {
     return (void *)((MessageListener *)  ((Actor *) x));
 }
@@ -23503,6 +23565,7 @@ static swig_type_info _swigt__p_Actor = {"_p_Actor", "Actor *", 0, 0, (void*)&_w
 static swig_type_info _swigt__p_AngelSampleHandle = {"_p_AngelSampleHandle", "AngelSampleHandle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_AngelSoundHandle = {"_p_AngelSoundHandle", "AngelSoundHandle *", 0, 0, (void*)0, 0};
 static swig_type_info _swigt__p_Camera = {"_p_Camera", "Camera *", 0, 0, (void*)&_wrap_class_Camera, 0};
+static swig_type_info _swigt__p_Castle = {"_p_Castle", "Castle *", 0, 0, (void*)&_wrap_class_Castle, 0};
 static swig_type_info _swigt__p_Color = {"_p_Color", "Color *", 0, 0, (void*)&_wrap_class_Color, 0};
 static swig_type_info _swigt__p_CompoundLog = {"_p_CompoundLog", "CompoundLog *", 0, 0, (void*)&_wrap_class_CompoundLog, 0};
 static swig_type_info _swigt__p_Console = {"_p_Console", "Console *", 0, 0, (void*)0, 0};
@@ -23567,6 +23630,7 @@ static swig_type_info *swig_type_initial[] = {
   &_swigt__p_AngelSampleHandle,
   &_swigt__p_AngelSoundHandle,
   &_swigt__p_Camera,
+  &_swigt__p_Castle,
   &_swigt__p_Color,
   &_swigt__p_CompoundLog,
   &_swigt__p_Console,
@@ -23627,10 +23691,11 @@ static swig_type_info *swig_type_initial[] = {
 };
 
 static swig_cast_info _swigc__p_Accelerometer[] = {  {&_swigt__p_Accelerometer, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Actor[] = {  {&_swigt__p_Actor, 0, 0, 0},  {&_swigt__p_TextActor, _p_TextActorTo_p_Actor, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_Actor, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_Actor, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_Actor, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_Actor, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_Actor, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_Actor, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Actor[] = {  {&_swigt__p_Actor, 0, 0, 0},  {&_swigt__p_TextActor, _p_TextActorTo_p_Actor, 0, 0},  {&_swigt__p_Castle, _p_CastleTo_p_Actor, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_Actor, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_Actor, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_Actor, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_Actor, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_Actor, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_Actor, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_AngelSampleHandle[] = {  {&_swigt__p_AngelSampleHandle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_AngelSoundHandle[] = {  {&_swigt__p_AngelSoundHandle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Camera[] = {  {&_swigt__p_Camera, 0, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Castle[] = {  {&_swigt__p_Castle, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Color[] = {  {&_swigt__p_Color, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_CompoundLog[] = {  {&_swigt__p_CompoundLog, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Console[] = {  {&_swigt__p_Console, 0, 0, 0},{0, 0, 0, 0}};
@@ -23648,12 +23713,12 @@ static swig_cast_info _swigc__p_GridActor[] = {  {&_swigt__p_GridActor, 0, 0, 0}
 static swig_cast_info _swigc__p_Lair[] = {  {&_swigt__p_Lair, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MathUtil[] = {  {&_swigt__p_MathUtil, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Message[] = {  {&_swigt__p_TypedMessageT_Vec2ui_t, _p_TypedMessageT_Vec2ui_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_Vec2i_t, _p_TypedMessageT_Vec2i_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_std__string_t, _p_TypedMessageT_std__string_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_Vec3i_t, _p_TypedMessageT_Vec3i_tTo_p_Message, 0, 0},  {&_swigt__p_Message, 0, 0, 0},  {&_swigt__p_TypedMessageT_Vector2_t, _p_TypedMessageT_Vector2_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_Vec3ui_t, _p_TypedMessageT_Vec3ui_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_int_t, _p_TypedMessageT_int_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_float_t, _p_TypedMessageT_float_tTo_p_Message, 0, 0},  {&_swigt__p_TypedMessageT_Vector3_t, _p_TypedMessageT_Vector3_tTo_p_Message, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_MessageListener[] = {  {&_swigt__p_TextActor, _p_TextActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Actor, _p_ActorTo_p_MessageListener, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_MessageListener, 0, 0},  {&_swigt__p_MessageListener, 0, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_MessageListener, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_MessageListener, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_MessageListener, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_MessageListener[] = {  {&_swigt__p_TextActor, _p_TextActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Actor, _p_ActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Castle, _p_CastleTo_p_MessageListener, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_MessageListener, 0, 0},  {&_swigt__p_MessageListener, 0, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_MessageListener, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_MessageListener, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_MessageListener, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_MessageListener, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_MouseListener[] = {  {&_swigt__p_MouseListener, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_ParticleActor[] = {  {&_swigt__p_ParticleActor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_PhysicsActor[] = {  {&_swigt__p_PhysicsActor, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Preferences[] = {  {&_swigt__p_Preferences, 0, 0, 0},{0, 0, 0, 0}};
-static swig_cast_info _swigc__p_Renderable[] = {  {&_swigt__p_TextActor, _p_TextActorTo_p_Renderable, 0, 0},  {&_swigt__p_Actor, _p_ActorTo_p_Renderable, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_Renderable, 0, 0},  {&_swigt__p_GridActor, _p_GridActorTo_p_Renderable, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_Renderable, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_Renderable, 0, 0},  {&_swigt__p_Renderable, 0, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_Renderable, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_Renderable, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_Renderable, 0, 0},{0, 0, 0, 0}};
+static swig_cast_info _swigc__p_Renderable[] = {  {&_swigt__p_TextActor, _p_TextActorTo_p_Renderable, 0, 0},  {&_swigt__p_Actor, _p_ActorTo_p_Renderable, 0, 0},  {&_swigt__p_Castle, _p_CastleTo_p_Renderable, 0, 0},  {&_swigt__p_FullScreenActor, _p_FullScreenActorTo_p_Renderable, 0, 0},  {&_swigt__p_GridActor, _p_GridActorTo_p_Renderable, 0, 0},  {&_swigt__p_Enemy, _p_EnemyTo_p_Renderable, 0, 0},  {&_swigt__p_PhysicsActor, _p_PhysicsActorTo_p_Renderable, 0, 0},  {&_swigt__p_Renderable, 0, 0, 0},  {&_swigt__p_ParticleActor, _p_ParticleActorTo_p_Renderable, 0, 0},  {&_swigt__p_Lair, _p_LairTo_p_Renderable, 0, 0},  {&_swigt__p_Camera, _p_CameraTo_p_Renderable, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SoundDevice[] = {  {&_swigt__p_SoundDevice, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_Switchboard[] = {  {&_swigt__p_Switchboard, 0, 0, 0},{0, 0, 0, 0}};
 static swig_cast_info _swigc__p_SystemLog[] = {  {&_swigt__p_SystemLog, 0, 0, 0},{0, 0, 0, 0}};
@@ -23695,6 +23760,7 @@ static swig_cast_info *swig_cast_initial[] = {
   _swigc__p_AngelSampleHandle,
   _swigc__p_AngelSoundHandle,
   _swigc__p_Camera,
+  _swigc__p_Castle,
   _swigc__p_Color,
   _swigc__p_CompoundLog,
   _swigc__p_Console,

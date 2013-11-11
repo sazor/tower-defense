@@ -18,25 +18,25 @@ public:
     void setEffects(std::vector<Effect>);
     virtual void ReceiveMessage(Message *message);
     std::vector<Effect> getEffects() const;
-    void setSpeed(int speed);
-    int getSpeed() const;
-    void setCash(int cash);
-    int getCash() const;
+    void setSpeed(float speed);
+    float getSpeed() const;
+    void setCash(float cash);
+    float getCash() const;
     void GoTo(Vector2 newDestination);
     virtual void Render();
-    void setMax_health(int max_health);
-    int getMax_health() const;
-    void setHeath(int heath);
-    int getHeath() const;
+    void setMax_health(float max_health);
+    float getMax_health() const;
+    void setHeath(float heath);
+    float getHeath() const;
     void GetToNextPoint();
 
 private:
-    int heath, max_health, cash, speed;
+    float heath, max_health, cash, speed;
     std::vector<Effect> effects;
     void move();
     void effect(Effect);
     void die();
-    void damage(int);
+    void damage(float);
     bool tower_attack();
     Vector2List _pathPoints;
     unsigned int _pathIndex;

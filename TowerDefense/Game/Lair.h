@@ -13,14 +13,14 @@ public:
     Lair();
     Lair(const Lair& orig);
     virtual ~Lair();
-    void release_enemy(Vector2 vec);
+    void release_enemy();
     void time();
     virtual bool change_position(Point);
     virtual void ReceiveMessage(Message *message);
     virtual void Render();
 private:
-    int interval; 
-    bool first_render;
+    int time_interval; 
+    bool rendered;
 };
 
 #endif	/* LAIR_H */

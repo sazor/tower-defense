@@ -610,7 +610,7 @@ protected:
 	Vector2 _position;
 	Color _color;
 	float _rotation;
-	
+	bool first_render;
 	float _UV[8];
 	
 	actorDrawShape _drawShape;
