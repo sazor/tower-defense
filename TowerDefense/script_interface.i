@@ -42,5 +42,6 @@ class Castle : public Actor
 {
 public:
 	Castle();
+	void get_damage(int);
 };
 #endif

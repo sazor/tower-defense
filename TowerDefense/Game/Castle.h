@@ -1,6 +1,5 @@
 #ifndef CASTLE_H
 #define	CASTLE_H
-#include "Tower.h"
 #include "Point.h"
 #include "GameApp.h"
 
@@ -12,7 +11,6 @@ public:
     void get_damage(int);
     void collapse();
     void get_cash(int);
-    bool levelup_tower(Tower&);
     virtual bool change_position(Point);
     void setCash(int cash);
     int getCash() const;

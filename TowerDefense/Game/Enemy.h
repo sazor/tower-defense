@@ -6,6 +6,7 @@
 #include "Point.h"
 #include "GameApp.h"
 #include <algorithm>
+#include "Castle.h"
 
 class Enemy : public Actor{
 public:

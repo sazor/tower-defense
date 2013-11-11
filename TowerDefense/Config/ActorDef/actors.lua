@@ -8,6 +8,11 @@ lair = {
   name = "Lair",
 }
 
+castle = {
+  class = "Castle",
+  name = "Castle",
+}
+
 simple_actor = {
   name = "SimpleActor",
 }

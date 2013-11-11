@@ -8,6 +8,9 @@
 
 Castle::Castle()
 {
+    rendered = false;
+    this->max_health = 100;
+    this->health = 100;
 }
 
 Castle::Castle(const Castle& orig)
@@ -16,6 +19,12 @@ Castle::Castle(const Castle& orig)
 
 Castle::~Castle()
 {
+}
+
+void Castle::get_damage(int dmg){
+    this->health -= dmg;
+    ConsoleLog *c = new ConsoleLog();
+    c->Printf("Castle health is %d", this->health);
 }
 
 void Castle::setCash(int cash)
@@ -45,7 +54,7 @@ void Castle::setHealth(int health)
 
 int Castle::getHealth() const
 {
-        return health;
+        return this->health;
 }
 
 bool Castle::change_position(Point){

@@ -18,19 +18,20 @@ def pixels_to_units(px)
   ratio = window_width / world_dim_x
   return px / ratio
 end
-file = open("with_lair.json")
+file = open("with_castle.json")
 json = file.read
 parsed = JSON.parse(json)
 squares = parsed["layers"][0]["data"]
 objects = parsed["layers"][1]["data"]
+castle = parsed["layers"][2]["data"]
 window_h = parsed["height"]
 window_w = parsed["width"]
 tilt_h = parsed["tileheight"]
 tilt_w = parsed["tilewidth"]
-Tile = Struct.new(:name, :src)
+Tile = Struct.new(:name, :src, :width, :height)
 tiles = Array.new
 parsed["tilesets"].each do |set|
-	tiles[set["firstgid"]] = Tile.new(set["name"], set["image"].gsub('../../TowerDefense/',''))
+	tiles[set["firstgid"]] = Tile.new(set["name"], set["image"].gsub('../../TowerDefense/',''), set["imagewidth"], set["imageheight"])
 end
 f = File.new("../../TowerDefense/Config/Level/level.lua", "w")
 posx = -0.5 * tilt_w
@@ -61,6 +62,18 @@ squares.each_with_index do |t, index|
 			f.puts "\tlayer = 'objects',"
 			f.puts "\tposition = {#{x},#{y}},"
 			f.puts "\ttag = '#{tiles[objects[index]].name}',"
+			f.puts "}"
+		end
+		if castle[index] != 0 then
+			castle_h, castle_w = pixels_to_units(tiles[castle[index]].height), pixels_to_units(tiles[castle[index]].width) 
+			pos_x, pos_y = screen_to_world((posx + castle_w / 2), posy)
+			f.puts "#{tiles[castle[index]].name} = {"
+			f.puts "\tsize = {#{castle_h}, #{castle_w}},"
+			f.puts "\tdef = '#{tiles[castle[index]].name}',"
+			f.puts "\tsprite = '#{tiles[castle[index]].src}',"
+			f.puts "\tlayer = 'objects',"
+			f.puts "\tposition = {#{pos_x},#{pos_y}},"
+			f.puts "\ttag = '#{tiles[castle[index]].name}',"
 			f.puts "}"
 		end
 	end

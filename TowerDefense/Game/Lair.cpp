@@ -21,13 +21,18 @@ Lair::Lair(const Lair& orig)
 }
 
 void Lair::release_enemy(){
-	while(!rendered);
-	Vector2 vec = GetPosition();
-	vec.Y -= 1.25f;	
-	while(true){
+	//while(!rendered);
+	for(int i = 0; i < 9; ++i){
 		std::this_thread::sleep_for(std::chrono::seconds(time_interval));
-		Enemy* enemy = new Enemy(vec);
+		Vector2 vec = GetPosition();
+		vec.Y -= 1.25f;	
+		Enemy* enemy = (Enemy*)Actor::Create("enemy");
+		enemy->SetPosition(vec);
+		theWorld.Add(enemy, 2);
+		Vector2 aim = Vector2(-9.29f,0.71f);
+    	enemy->GoTo(aim);
 	}
+	Castle* castle = (Castle*)Actor::GetNamed("Castle");
 }
 
 Lair::~Lair()

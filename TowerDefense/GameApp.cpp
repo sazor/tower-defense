@@ -97,6 +97,12 @@ GameApp::GameApp()
 	theWorld.LoadLevel("level");
 	BoundingBox bounds(Vector2(-20, -20), Vector2(20, 20));
 	theSpatialGraph.CreateGraph(0.6f, bounds);
+	/*Castle* castle = (Castle*)Actor::GetNamed("Castle");
+	String description = "Health of castle is: " + IntToString(castle->getHealth());
+	TextActor *t = new TextActor("Console", description);
+	t->SetAlignment(TXT_Center);
+	t->SetPosition(0.0f, 5.0f);
+	theWorld.Add(t);*/
 }
 
 void GameApp::MouseDownEvent(Vec2i screenCoordinates, MouseButtonInput button)
@@ -121,7 +127,6 @@ AppScreen* GameApp::GetCurrentScreen()
 
 void GameApp::ReceiveMessage(Message* message)
 {
-
 }
 
 void GameApp::Render()
@@ -136,5 +141,4 @@ void GameApp::SoundEnded(AngelSoundHandle sound)
 
 void GameApp::Update(float dt)
 {
-
 }

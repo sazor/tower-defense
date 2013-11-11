@@ -82,8 +82,6 @@ Actor::Actor()
 	SetPosition(0.0f, 0.0f);
 	SetUVs(Vector2(0.f, 0.f), Vector2(1.f, 1.f));
 	_name = "";
-	ConsoleLog *c = new ConsoleLog();
-	c->Printf("Render");
 	_spriteNumFrames = 0;
 	_spriteCurrentFrame = 0;
 	_spriteTextureReferences[0] = -1; 

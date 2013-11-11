@@ -574,6 +574,15 @@ grass_70 = {
 	position = {-9.285714285714286,2.1428571428571432},
 	tag = 'background',
 }
+castle_70 = {
+	size = {3.1026785714285716, 4.129464285714286},
+	def = 'castle',
+	sprite = 'Resources/Images/castle.png',
+	layer = 'objects',
+	position = {-9.239626514668368,2.1428571428571432},
+	tag = 'castle'
+}
+
 grass_71 = {
 	size = {1.4285714285714286, 1.4285714285714286},
 	def = 'grass',

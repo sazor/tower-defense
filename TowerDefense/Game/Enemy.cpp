@@ -9,9 +9,6 @@
 #include <iostream>
 
 Enemy::Enemy(){
-   /* SetPosition(5.0f, 5.0f);
-    SetDrawShape(ADS_Square);
-    SetSprite("Resources/Images/Test.png");*/
     SetColor(1, 0, 0);
     SetSize(0.75f);
     SetDrawShape(ADS_Circle);
@@ -19,8 +16,6 @@ Enemy::Enemy(){
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
-    Vector2 aim = Vector2(-9.29f,0.71f);
-    GoTo(aim);
 }
 
 Enemy::Enemy(Vector2 pos){
@@ -34,10 +29,7 @@ Enemy::Enemy(Vector2 pos){
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
-    theWorld.Add(this, 2);
-    //GoToCastle
-    Vector2 aim = Vector2(-9.29f,0.71f);
-    GoTo(aim);
+    
 }
 
 Enemy::Enemy(const Enemy& orig)
@@ -58,20 +50,20 @@ void Enemy::ReceiveMessage(Message *message){
         }
         else 
         {
-            theSwitchboard.Broadcast(new Message("EndPointReached", this));
             _pathPoints.clear();
             _pathIndex = 0;
+            Castle* castle = (Castle*)Actor::GetNamed("Castle");
+            castle->get_damage(5);
             theWorld.Remove(this);
+            Actor::Destroy();
         }
 
     }
     if (message->GetMessageName() == "MouseDown")
     {
-        ConsoleLog *c = new ConsoleLog();
         TypedMessage<Vec2i> *m = (TypedMessage<Vec2i>*)message;
         Vec2i screenCoordinates = m->GetValue();
         Vector2 next = MathUtil::ScreenToWorld(screenCoordinates);
-        c->Printf("X: %4.4f. Y: %4.4f ", next.X, next.Y);
         GoTo(next);
     }
 }
