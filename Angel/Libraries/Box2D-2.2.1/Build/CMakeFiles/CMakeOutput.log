@@ -28,16 +28,16 @@ The CXX compiler identification is GNU, found in "/home/sazor/nbp/TD/Angel/Libra
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec59388533/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec609520365/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec59388533.dir/build.make CMakeFiles/cmTryCompileExec59388533.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec609520365.dir/build.make CMakeFiles/cmTryCompileExec609520365.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec59388533.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec59388533.dir/testCCompiler.c.o   -c /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec59388533
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec59388533.dir/link.txt --verbose=1
-/usr/bin/cc         CMakeFiles/cmTryCompileExec59388533.dir/testCCompiler.c.o  -o cmTryCompileExec59388533 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec609520365.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec609520365.dir/testCCompiler.c.o   -c /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec609520365
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec609520365.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec609520365.dir/testCCompiler.c.o  -o cmTryCompileExec609520365 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -45,16 +45,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec17299772/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2690962385/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec17299772.dir/build.make CMakeFiles/cmTryCompileExec17299772.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2690962385.dir/build.make CMakeFiles/cmTryCompileExec2690962385.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec17299772
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec17299772.dir/link.txt --verbose=1
-/usr/bin/cc       -v CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec17299772 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2690962385
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2690962385.dir/link.txt --verbose=1
+/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2690962385 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -64,8 +64,8 @@ Thread model: posix
 gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec17299772' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec17299772 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2690962385' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2690962385 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -74,16 +74,16 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec17299772/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec2690962385/fast"]
   ignore line: [make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec17299772.dir/build.make CMakeFiles/cmTryCompileExec17299772.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2690962385.dir/build.make CMakeFiles/cmTryCompileExec2690962385.dir/build]
   ignore line: [make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec17299772]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec17299772.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec17299772 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-2.8/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2690962385]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2690962385.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2690962385 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -93,8 +93,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec17299772' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec17299772 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2690962385' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2690962385 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec17299772] ==> ignore
+    arg [cmTryCompileExec2690962385] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -120,7 +120,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec17299772.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec2690962385.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -152,16 +152,16 @@ Parsed C implicit link information from above output:
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2549706259/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3091705181/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2549706259.dir/build.make CMakeFiles/cmTryCompileExec2549706259.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3091705181.dir/build.make CMakeFiles/cmTryCompileExec3091705181.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec2549706259.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec2549706259.dir/testCXXCompiler.cxx.o -c /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec2549706259
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2549706259.dir/link.txt --verbose=1
-/usr/bin/c++          CMakeFiles/cmTryCompileExec2549706259.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec2549706259 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec3091705181.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3091705181.dir/testCXXCompiler.cxx.o -c /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec3091705181
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3091705181.dir/link.txt --verbose=1
+/usr/bin/c++          CMakeFiles/cmTryCompileExec3091705181.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec3091705181 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -169,16 +169,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1653825025/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec52373976/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1653825025.dir/build.make CMakeFiles/cmTryCompileExec1653825025.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec52373976.dir/build.make CMakeFiles/cmTryCompileExec52373976.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec1653825025
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1653825025.dir/link.txt --verbose=1
-/usr/bin/c++        -v CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1653825025 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec52373976
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec52373976.dir/link.txt --verbose=1
+/usr/bin/c++        -v CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec52373976 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -188,8 +188,8 @@ Thread model: posix
 gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1653825025' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1653825025 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec52373976' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec52373976 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -198,16 +198,16 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec1653825025/fast"]
+  ignore line: [Run Build Command:/usr/bin/make "cmTryCompileExec52373976/fast"]
   ignore line: [make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1653825025.dir/build.make CMakeFiles/cmTryCompileExec1653825025.dir/build]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec52373976.dir/build.make CMakeFiles/cmTryCompileExec52373976.dir/build]
   ignore line: [make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec1653825025]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1653825025.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1653825025 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-2.8/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec52373976]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec52373976.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec52373976 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -217,8 +217,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.1 (Ubuntu/Linaro 4.8.1-10ubuntu8) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1653825025' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1653825025 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec52373976' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec52373976 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -232,7 +232,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec1653825025] ==> ignore
+    arg [cmTryCompileExec52373976] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -244,7 +244,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec1653825025.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec52373976.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -274,16 +274,16 @@ Parsed CXX implicit link information from above output:
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4173250551/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3248608471/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4173250551.dir/build.make CMakeFiles/cmTryCompileExec4173250551.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3248608471.dir/build.make CMakeFiles/cmTryCompileExec3248608471.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4173250551.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec4173250551.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec4173250551
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4173250551.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec4173250551.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4173250551 -rdynamic -lX11 -lXext 
+Building C object CMakeFiles/cmTryCompileExec3248608471.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec3248608471.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3248608471
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3248608471.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec3248608471.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3248608471 -rdynamic -lX11 -lXext 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -291,16 +291,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3400055475/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec2181756649/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3400055475.dir/build.make CMakeFiles/cmTryCompileExec3400055475.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2181756649.dir/build.make CMakeFiles/cmTryCompileExec2181756649.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3400055475.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3400055475.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3400055475
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3400055475.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3400055475.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3400055475 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2181756649.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec2181756649.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2181756649
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2181756649.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec2181756649.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2181756649 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -308,16 +308,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2689169130/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec911931377/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2689169130.dir/build.make CMakeFiles/cmTryCompileExec2689169130.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec911931377.dir/build.make CMakeFiles/cmTryCompileExec911931377.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2689169130.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec2689169130.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2689169130
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2689169130.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec2689169130.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2689169130 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec911931377.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec911931377.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec911931377
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec911931377.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec911931377.dir/CheckFunctionExists.c.o  -o cmTryCompileExec911931377 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -325,16 +325,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3697047984/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3733298423/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3697047984.dir/build.make CMakeFiles/cmTryCompileExec3697047984.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3733298423.dir/build.make CMakeFiles/cmTryCompileExec3733298423.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3697047984.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3697047984.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3697047984
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3697047984.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3697047984.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3697047984 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3733298423.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3733298423.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3733298423
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3733298423.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3733298423.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3733298423 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -342,16 +342,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4280970932/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3334530210/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4280970932.dir/build.make CMakeFiles/cmTryCompileExec4280970932.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3334530210.dir/build.make CMakeFiles/cmTryCompileExec3334530210.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4280970932.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec4280970932.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec4280970932
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4280970932.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec4280970932.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4280970932 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3334530210.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3334530210.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3334530210
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3334530210.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3334530210.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3334530210 -rdynamic 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 
@@ -359,16 +359,16 @@ make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Bo
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3410014805/fast"
+Run Build Command:/usr/bin/make "cmTryCompileExec3253922808/fast"
 make[1]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3410014805.dir/build.make CMakeFiles/cmTryCompileExec3410014805.dir/build
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3253922808.dir/build.make CMakeFiles/cmTryCompileExec3253922808.dir/build
 make[2]: Вход в каталог `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 /usr/bin/cmake -E cmake_progress_report /home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3410014805.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3410014805.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3410014805
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3410014805.dir/link.txt --verbose=1
-/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3410014805.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3410014805 -rdynamic -lICE 
+Building C object CMakeFiles/cmTryCompileExec3253922808.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec3253922808.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3253922808
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3253922808.dir/link.txt --verbose=1
+/usr/bin/cc     -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec3253922808.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3253922808 -rdynamic -lICE 
 make[2]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 make[1]: Выход из каталога `/home/sazor/nbp/TD/Angel/Libraries/Box2D-2.2.1/Build/CMakeFiles/CMakeTmp'
 

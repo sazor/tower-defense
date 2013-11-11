@@ -9,9 +9,10 @@
 #include <iostream>
 
 Enemy::Enemy(){
-    SetColor(1, 0, 0);
-    SetSize(0.75f);
-    SetDrawShape(ADS_Circle);
+    SetSize(MathUtil::PixelsToWorldUnits(25.0f), MathUtil::PixelsToWorldUnits(40.0f));
+    SetSprite("Resources/Images/zombie_001.png");
+    LoadSpriteFrames("Resources/Images/zombie_001.png");
+    PlaySpriteAnimation(0.5f, SAT_Loop, 0, 2, "Anim"); 
     speed = 3.0f;
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");

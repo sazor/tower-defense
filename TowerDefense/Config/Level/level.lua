@@ -566,6 +566,22 @@ road_69 = {
 	position = {9.285714285714286,3.571428571428571},
 	tag = 'background',
 }
+road_666 = {
+	size = {1.4285714285714286, 1.4285714285714286},
+	def = 'road',
+	sprite = 'Resources/Images/zombie_001.png',
+	layer = 'background',
+	position = {29.285714285714286,3.571428571428571},
+	tag = 'background',
+}
+road_666b = {
+	size = {1.4285714285714286, 1.4285714285714286},
+	def = 'road',
+	sprite = 'Resources/Images/zombie_002.png',
+	layer = 'background',
+	position = {29.285714285714286,3.571428571428571},
+	tag = 'background',
+}
 grass_70 = {
 	size = {1.4285714285714286, 1.4285714285714286},
 	def = 'grass',

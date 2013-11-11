@@ -1,6 +1,6 @@
 enemy = {
   class = "Enemy",
-  name = "Enemy"
+  name = "Enemy",
 }
 
 lair = {
