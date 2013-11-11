@@ -11,6 +11,8 @@
 //  Note the paths, which are relative to Angel/Scripting/Interfaces/angel.i
 //  (the central wrapping file). 
 #include "../../../TowerDefense/Game/Enemy.h"
+#include "../../../TowerDefense/Game/Lair.h"
+#include "../../../TowerDefense/Game/Castle.h"
 %}
 
 // The full declaration of Enemy is copied in a comment block below. 
@@ -28,25 +30,12 @@ class Enemy : public Actor
 {
 public:
 	Enemy();
+	Enemy(Vector2);
 };
-#endif
-
-/*
-class Enemy : public Actor
+class Lair : public Actor
 {
 public:
-	Enemy();
-	void GoTo(Vector2 newDestination);
-	virtual void Render();
-	virtual void ReceiveMessage(Message *message);
-	
-	void ToggleDrawPath(bool draw);
-	
-private:
-	Vector2List _pathPoints;
-	unsigned int _pathIndex;
-	bool _drawPath;
-	
-	void GetToNextPoint();
+	Lair();
+	void Lair::release_enemy(Vector2 vec);
 };
-*/
+#endif

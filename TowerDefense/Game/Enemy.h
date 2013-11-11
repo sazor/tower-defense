@@ -5,10 +5,12 @@
 //#include "EffectContainer.h"
 #include "Point.h"
 #include "GameApp.h"
+#include <algorithm>
 
 class Enemy : public Actor{
 public:
     Enemy();
+    Enemy(Vector2);
     Enemy(const Enemy& orig);
     virtual ~Enemy();
     void time();

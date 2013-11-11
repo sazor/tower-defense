@@ -81,7 +81,7 @@ OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 .PHONY: clean all SWIG-Wrapper
 
 %.o: %.cpp
-	$(CXX) -c $(INCLUDE) -Wno-write-strings -Wno-deprecated -o $@ $^
+	$(CXX) -c $(INCLUDE) -Wno-write-strings -Wno-deprecated -std=gnu++0x -pthread -o $@ $^
 
 all: $(TARGET)
 

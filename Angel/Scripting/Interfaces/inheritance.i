@@ -1,6 +1,6 @@
 %include <factory.i>
 
-%factory(Actor*, TextActor, FullScreenActor, Enemy, Camera, PhysicsActor, ParticleActor);
+%factory(Actor*, TextActor, Lair, Enemy, FullScreenActor, PhysicsActor, Camera, ParticleActor);
 %factory(DeveloperLog*, ConsoleLog, CompoundLog, FileLog, SystemLog);
-%factory(MessageListener*, TextActor, Enemy, Camera, FullScreenActor, PhysicsActor, ParticleActor, Actor);
-%factory(Renderable*, TextActor, Enemy, FullScreenActor, Camera, PhysicsActor, Actor, GridActor, ParticleActor);
+%factory(MessageListener*, TextActor, Enemy, Lair, FullScreenActor, Camera, PhysicsActor, ParticleActor, Actor);
+%factory(Renderable*, TextActor, Lair, Enemy, Camera, FullScreenActor, PhysicsActor, Actor, GridActor, ParticleActor);

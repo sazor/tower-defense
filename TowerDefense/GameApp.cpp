@@ -88,26 +88,15 @@ GameApp* GameApp::s_GameApp = NULL;
 
 GameApp::GameApp()
 {	
-	ConsoleLog *c = new ConsoleLog();
 	theSound.SetSoundCallback(this, &GameManager::SoundEnded);
 	screen = new AppScreen();
 	sample = theSound.LoadSample("Resources/Sounds/click.ogg", false /*no stream*/);
-	theWorld.NameLayer("foreground", 0);
-	theWorld.NameLayer("units", 1);
-	theWorld.LoadLevel("leveltest");
-	ActorSet grass = theTagList.GetObjectsTagged("background");
-	ActorSet::iterator it = grass.begin();
-	while (it != grass.end())
-	{
-		_objects.push_back(*it);
-		it++;
-	}
+	theWorld.NameLayer("background", 0);
+	theWorld.NameLayer("objects", 1);
+	theWorld.NameLayer("units", 2);
+	theWorld.LoadLevel("level");
 	BoundingBox bounds(Vector2(-20, -20), Vector2(20, 20));
-	theSpatialGraph.CreateGraph(0.25f, bounds);
-	theSpatialGraph.EnableDrawGraph(true);
-	Enemy* en = new Enemy();
-	en->SetPosition(7.81f, 3.43f);
-	theWorld.Add(en, 2);
+	theSpatialGraph.CreateGraph(0.6f, bounds);
 }
 
 void GameApp::MouseDownEvent(Vec2i screenCoordinates, MouseButtonInput button)
@@ -143,4 +132,9 @@ void GameApp::Render()
 void GameApp::SoundEnded(AngelSoundHandle sound)
 {	
 	// Detect sounds that have ended here.
+}
+
+void GameApp::Update(float dt)
+{
+
 }

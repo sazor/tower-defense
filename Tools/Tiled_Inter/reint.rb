@@ -18,10 +18,11 @@ def pixels_to_units(px)
   ratio = window_width / world_dim_x
   return px / ratio
 end
-file = open("map.json")
+file = open("with_lair.json")
 json = file.read
 parsed = JSON.parse(json)
 squares = parsed["layers"][0]["data"]
+objects = parsed["layers"][1]["data"]
 window_h = parsed["height"]
 window_w = parsed["width"]
 tilt_h = parsed["tileheight"]
@@ -31,7 +32,7 @@ tiles = Array.new
 parsed["tilesets"].each do |set|
 	tiles[set["firstgid"]] = Tile.new(set["name"], set["image"].gsub('../../TowerDefense/',''))
 end
-f = File.new("../../TowerDefense/Config/Level/leveltest.lua", "w")
+f = File.new("../../TowerDefense/Config/Level/level.lua", "w")
 posx = -0.5 * tilt_w
 posy = 0.5 * tilt_h
 squares.each_with_index do |t, index|
@@ -48,12 +49,23 @@ squares.each_with_index do |t, index|
 		f.puts "\tsize = {#{h}, #{w}},"
 		f.puts "\tdef = '#{tiles[t].name}',"
 		f.puts "\tsprite = '#{tiles[t].src}',"
-		f.puts "\tlayer = 'foreground',"
+		f.puts "\tlayer = 'background',"
 		f.puts "\tposition = {#{x},#{y}},"
 		f.puts "\ttag = 'background',"
 		f.puts "}"
+		if objects[index] != 0 then
+			f.puts "#{tiles[objects[index]].name}_#{index} = {"
+			f.puts "\tsize = {#{h}, #{w}},"
+			f.puts "\tdef = '#{tiles[objects[index]].name}',"
+			f.puts "\tsprite = '#{tiles[objects[index]].src}',"
+			f.puts "\tlayer = 'objects',"
+			f.puts "\tposition = {#{x},#{y}},"
+			f.puts "\ttag = '#{tiles[objects[index]].name}',"
+			f.puts "}"
+		end
 	end
 end
+
 f.close
 
 	

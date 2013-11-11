@@ -8,6 +8,11 @@ enemy = {
   name = "Enemy"
 }
 
+lair = {
+  class = "Lair",
+  name = "Lair"
+}
+
 simple_actor = {
   name = "SimpleActor",
 }

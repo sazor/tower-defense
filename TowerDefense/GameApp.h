@@ -69,6 +69,8 @@ public:
 	virtual void SoundEnded(AngelSoundHandle sound);
 
 	virtual void ReceiveMessage(Message* message);
+
+	virtual void Update(float dt);
 	
 protected:
 	GameApp();
