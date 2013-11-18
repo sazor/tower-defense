@@ -9,6 +9,7 @@
 
 Trap::Trap()
 {
+	SetSprite("Resources/Images/trap.png");
 }
 
 Trap::Trap(const Trap& orig)

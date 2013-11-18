@@ -6,6 +6,7 @@
  */
 
 #include "Lair.h"
+const int waves = 15;
 
 Lair::Lair()
 {
@@ -22,7 +23,7 @@ Lair::Lair(const Lair& orig)
 
 void Lair::release_enemy(){
 	//while(!rendered);
-	for(int i = 0; i < 9; ++i){
+	for(int i = 0; i < waves; ++i){
 		std::this_thread::sleep_for(std::chrono::seconds(time_interval));
 		Vector2 vec = GetPosition();
 		vec.Y -= 1.25f;	

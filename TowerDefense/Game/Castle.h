@@ -20,6 +20,8 @@ public:
     int getHealth() const;
     virtual void ReceiveMessage(Message *message);
     virtual void Render();
+    bool buy_tower(int);
+    void give_cash(int);
 private:
     int health, max_health, cash;
     bool rendered;

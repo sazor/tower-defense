@@ -30,3 +30,18 @@ int Tower::getLevel() const
 bool Tower::change_position(Point){
 	
 }
+
+void Tower::Render()
+{
+    Actor::Render();
+}
+
+void Tower::ReceiveMessage(Message *message){
+
+}
+
+Tower::Tower(){
+}
+
+Tower::Tower(const Tower& orig){
+}

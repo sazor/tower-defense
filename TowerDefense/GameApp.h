@@ -71,7 +71,9 @@ public:
 	virtual void ReceiveMessage(Message* message);
 
 	virtual void Update(float dt);
-	
+
+	static TextActor *castle_health;
+	static TextActor *castle_cash;
 protected:
 	GameApp();
 	AppScreen* screen;
@@ -79,4 +81,5 @@ protected:
 
 private:
 	AngelSampleHandle sample;
+	static int tower;
 };

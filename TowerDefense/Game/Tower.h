@@ -2,10 +2,13 @@
 #define	TOWER_H
 #include "Characteristics.h"
 #include "Point.h"
+#include "GameApp.h"
+#include <chrono>
+#include <ctime>
+#include <thread>
 
-class Tower{
+class Tower : public Actor{
 protected:
-    virtual bool attack() = 0;
     Enemy& find_enemy();
     Enemy& nearest_tower();
     Enemy& nearest_castle();
@@ -13,18 +16,22 @@ protected:
     Enemy& strongest();
     Enemy& fastest();
 public:
-    Tower() { };
-    Tower(const Tower& orig) { };
+    Tower();
+    Tower(const Tower& orig);
     virtual ~Tower() { };
     void time();
+    virtual bool attack() { };
     bool change_position(Point);
     void level_up();
     void setCharacteristics(Characteristics characteristics);
     Characteristics getCharacteristics() const;
     void setLevel(int level);
     int getLevel() const;
+    virtual void ReceiveMessage(Message *message);
+    virtual void Render();
 private:
     int level;
+    bool rendered;
     Characteristics characteristics;
 };
 

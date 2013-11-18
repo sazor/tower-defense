@@ -85,6 +85,9 @@ void AppScreen::Render() {}
 
 
 GameApp* GameApp::s_GameApp = NULL;
+int GameApp::tower;
+TextActor * GameApp::castle_health;
+TextActor * GameApp::castle_cash;
 
 GameApp::GameApp()
 {	
@@ -97,12 +100,14 @@ GameApp::GameApp()
 	theWorld.LoadLevel("level");
 	BoundingBox bounds(Vector2(-20, -20), Vector2(20, 20));
 	theSpatialGraph.CreateGraph(0.6f, bounds);
-	/*Castle* castle = (Castle*)Actor::GetNamed("Castle");
-	String description = "Health of castle is: " + IntToString(castle->getHealth());
-	TextActor *t = new TextActor("Console", description);
-	t->SetAlignment(TXT_Center);
-	t->SetPosition(0.0f, 5.0f);
-	theWorld.Add(t);*/
+	theSpatialGraph.EnableDrawGraph(true);
+	Castle* castle = (Castle*)Actor::GetNamed("Castle");
+	castle_health = new TextActor("Console", "Castle health: " + IntToString(castle->getHealth()), TXT_Center);
+	castle_health->SetPosition(Vector2(-4.5f, 4.5f));
+	theWorld.Add(castle_health);
+	castle_cash = new TextActor("Console", "Castle cash: " + IntToString(castle->getCash()), TXT_Center);
+	castle_cash->SetPosition(Vector2(-4.5f, 3.5f));
+	theWorld.Add(castle_cash);
 }
 
 void GameApp::MouseDownEvent(Vec2i screenCoordinates, MouseButtonInput button)
@@ -127,6 +132,53 @@ AppScreen* GameApp::GetCurrentScreen()
 
 void GameApp::ReceiveMessage(Message* message)
 {
+	if (message->GetMessageName() == "MouseDown")
+    {
+    	Castle* castle = (Castle*)Actor::GetNamed("Castle");
+    	TypedMessage<Vec2i> *m = (TypedMessage<Vec2i>*)message;
+        Vec2i screenCoordinates = m->GetValue();
+        Vector2 click = MathUtil::ScreenToWorld(screenCoordinates);
+        if(tower != 3){
+	        ActorSet background = theTagList.GetObjectsTagged("grass");
+			ActorSet::iterator it = background.begin();
+	        while(it != background.end()){
+	        	Vector2 position = (*it)->GetPosition();
+	        	Vector2 size = (*it)->GetSize();
+	        	if ((click.X < position.X + size.X/2.0) && (click.X > position.X - size.X/2.0) && (click.Y < position.Y + size.Y/2.0) && (click.Y > position.Y - size.Y/2.0)){
+	        		if(!(castle->buy_tower(tower))) return;
+	        		if(tower == 1){
+	        			StandartTower* new_tower = (StandartTower*)Actor::Create("standart_tower");
+	        			new_tower->SetPosition(click);
+	        			theWorld.Add(new_tower, 2);
+	        		}
+	        		if(tower == 2){
+	        			MagicTower* new_tower = (MagicTower*)Actor::Create("magic_tower");
+	        			new_tower->SetPosition(click);
+	        			theWorld.Add(new_tower, 2);
+	        		}
+	        		break;
+	        	}
+	        	it++;
+	        }
+	    }
+	    else{
+	    	ActorSet background = theTagList.GetObjectsTagged("road");
+			ActorSet::iterator it = background.begin();
+	        while(it != background.end()){
+	        	Vector2 position = (*it)->GetPosition();
+	        	Vector2 size = (*it)->GetSize();
+	        	if ((click.X < position.X + size.X/2.0) && (click.X > position.X - size.X/2.0) && (click.Y < position.Y + size.Y/2.0) && (click.Y > position.Y - size.Y/2.0)){
+	        		if(!(castle->buy_tower(tower))) return;
+	        		Trap* new_trap = (Trap*)Actor::Create("trap");
+	        		new_trap->SetPosition(click);
+	        		theWorld.Add(new_trap, 1);
+	        		break;
+	        	}
+	        	it++;
+	        }
+	    }
+        theSwitchboard.UnsubscribeFrom(this, "MouseDown");
+    }
 }
 
 void GameApp::Render()
@@ -141,4 +193,19 @@ void GameApp::SoundEnded(AngelSoundHandle sound)
 
 void GameApp::Update(float dt)
 {
+	if (theInput.IsKeyDown('s'))
+	{
+		tower = 1;
+		theSwitchboard.SubscribeTo(this, "MouseDown");
+	}
+	if (theInput.IsKeyDown('m'))
+	{
+		tower = 2;
+		theSwitchboard.SubscribeTo(this, "MouseDown");
+	}
+	if (theInput.IsKeyDown('t'))
+	{
+		tower = 3;
+		theSwitchboard.SubscribeTo(this, "MouseDown");
+	}
 }

@@ -4,7 +4,7 @@
 #include "MagicTower.h"
 #include "StandartTower.h"
 
-class Trap : public MagicTower, public StandartTower{
+class Trap : public Tower{
 public:
     Trap();
     Trap(const Trap& orig);

@@ -8,12 +8,16 @@
 #include "Enemy.h"
 #include <iostream>
 
+const int cost = 100;
+
 Enemy::Enemy(){
+    health = 100;
     SetSize(MathUtil::PixelsToWorldUnits(25.0f), MathUtil::PixelsToWorldUnits(40.0f));
     SetSprite("Resources/Images/zombie_001.png");
+    Tag("enemy");
     LoadSpriteFrames("Resources/Images/zombie_001.png");
     PlaySpriteAnimation(0.5f, SAT_Loop, 0, 2, "Anim"); 
-    speed = 3.0f;
+    speed = 2.0f;
     theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
@@ -27,7 +31,6 @@ Enemy::Enemy(Vector2 pos){
     SetDrawShape(ADS_Circle);
     speed = 3.0f;
     //Events
-    theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
     
@@ -59,13 +62,6 @@ void Enemy::ReceiveMessage(Message *message){
             Actor::Destroy();
         }
 
-    }
-    if (message->GetMessageName() == "MouseDown")
-    {
-        TypedMessage<Vec2i> *m = (TypedMessage<Vec2i>*)message;
-        Vec2i screenCoordinates = m->GetValue();
-        Vector2 next = MathUtil::ScreenToWorld(screenCoordinates);
-        GoTo(next);
     }
 }
 
@@ -103,11 +99,22 @@ void Enemy::GetToNextPoint()
 {
     Vector2 next = _pathPoints[++_pathIndex];
     float distance = Vector2::Distance(_position, next);
-    //Want this guy to move at a constant rate of 8.0 units per second
     float time = distance / speed;
     MoveTo(next, time, false, "PathPointReached");
 }
 
+void Enemy::get_damage(int dmg){
+    health -= dmg;
+    if(health <= 0){
+        ConsoleLog *c = new ConsoleLog();
+        c->Printf("Death");
+        Castle* castle = (Castle*)Actor::GetNamed("Castle");
+        castle->give_cash(cost);
+        this->Untag("enemy");
+        theWorld.Remove(this);
+        Actor::Destroy();
+    }
+}
 
 void Enemy::setSpeed(float speed)
 {
@@ -139,14 +146,14 @@ float Enemy::getMax_health() const
     return max_health;
 }
 
-void Enemy::setHeath(float heath)
+void Enemy::setHealth(float heath)
 {
-    this->heath = heath;
+    this->health = health;
 }
 
-float Enemy::getHeath() const
+float Enemy::getHealth() const
 {
-    return heath;
+    return health;
 }
 
 bool Enemy::change_position(Point){

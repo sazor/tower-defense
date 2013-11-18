@@ -13,6 +13,10 @@
 #include "../../../TowerDefense/Game/Enemy.h"
 #include "../../../TowerDefense/Game/Lair.h"
 #include "../../../TowerDefense/Game/Castle.h"
+#include "../../../TowerDefense/Game/Tower.h"
+#include "../../../TowerDefense/Game/MagicTower.h"
+#include "../../../TowerDefense/Game/StandartTower.h"
+#include "../../../TowerDefense/Game/Trap.h"
 %}
 
 // The full declaration of Enemy is copied in a comment block below. 
@@ -44,4 +48,26 @@ public:
 	Castle();
 	void get_damage(int);
 };
+class Tower : public Actor
+{
+public:
+	Tower();
+};
+class MagicTower : public Tower
+{
+public:
+	MagicTower();
+};
+class StandartTower : public Tower
+{
+public:
+	StandartTower();
+};
+
+class Trap : public Tower
+{
+public:
+    Trap();
+};
+
 #endif

@@ -27,12 +27,12 @@ public:
     virtual void Render();
     void setMax_health(float max_health);
     float getMax_health() const;
-    void setHeath(float heath);
-    float getHeath() const;
+    void setHealth(float heath);
+    float getHealth() const;
     void GetToNextPoint();
-
+    void get_damage(int);
 private:
-    float heath, max_health, cash, speed;
+    float health, max_health, cash, speed;
     std::vector<Effect> effects;
     void move();
     void effect(Effect);

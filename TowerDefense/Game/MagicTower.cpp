@@ -10,6 +10,7 @@
  
 MagicTower::MagicTower()
 {
+	SetSprite("Resources/Images/magic_tower.png");
 }
 
 MagicTower::MagicTower(const MagicTower& orig)
@@ -21,6 +22,6 @@ MagicTower::~MagicTower()
 }
 
 bool MagicTower::attack(){
-	
+   
 }
 

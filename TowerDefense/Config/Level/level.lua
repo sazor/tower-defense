@@ -582,6 +582,30 @@ road_666b = {
 	position = {29.285714285714286,3.571428571428571},
 	tag = 'background',
 }
+road_666c = {
+	size = {1.4285714285714286, 1.4285714285714286},
+	def = 'road',
+	sprite = 'Resources/Images/magic_tower.png',
+	layer = 'background',
+	position = {29.285714285714286,3.571428571428571},
+	tag = 'background',
+}
+road_666d = {
+	size = {1.4285714285714286, 1.4285714285714286},
+	def = 'road',
+	sprite = 'Resources/Images/standart_tower.png',
+	layer = 'background',
+	position = {29.285714285714286,3.571428571428571},
+	tag = 'background',
+}
+road_666e = {
+	size = {1.4285714285714286, 1.4285714285714286},
+	def = 'road',
+	sprite = 'Resources/Images/trap.png',
+	layer = 'background',
+	position = {29.285714285714286,3.571428571428571},
+	tag = 'background',
+}
 grass_70 = {
 	size = {1.4285714285714286, 1.4285714285714286},
 	def = 'grass',
