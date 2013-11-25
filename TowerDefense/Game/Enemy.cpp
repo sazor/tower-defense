@@ -18,7 +18,6 @@ Enemy::Enemy(){
     LoadSpriteFrames("Resources/Images/zombie_001.png");
     PlaySpriteAnimation(0.5f, SAT_Loop, 0, 2, "Anim"); 
     speed = 2.0f;
-    theSwitchboard.SubscribeTo(this, "MouseDown");
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     _pathIndex = 0;
 }

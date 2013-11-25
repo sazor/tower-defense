@@ -15,7 +15,7 @@ MagicTower::MagicTower()
 	circle->SetColor(0.0f, 1.0f, 0.0f);
 	circle->SetDrawShape(ADS_Circle);
 	circle->SetSize(MathUtil::PixelsToWorldUnits(180.0));
-	circle->SetAlpha(0.5);
+	circle->SetAlpha(0.2);
 	SetSprite("Resources/Images/magic_tower.png");
 	std::thread interval(&MagicTower::attack, this);
 	interval.detach();
