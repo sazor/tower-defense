@@ -6,9 +6,12 @@
  */
 
 #include "Deceleration.h"
+#include "Enemy.h"
 
 Deceleration::Deceleration()
 {
+	remaining_time = 4;
+	value = 1;
 }
 
 Deceleration::Deceleration(const Deceleration& orig)
@@ -19,6 +22,11 @@ Deceleration::~Deceleration()
 {
 }
 
-void Deceleration::action(Enemy&){
-
+void Deceleration::action(Enemy& en){
+	en.decrease_speed(value);
 }
+
+void Deceleration::expired(Enemy& en){
+	en.increase_speed(value);
+}
+

@@ -34,7 +34,6 @@ class Enemy : public Actor
 {
 public:
 	Enemy();
-	Enemy(Vector2);
 };
 class Lair : public Actor
 {

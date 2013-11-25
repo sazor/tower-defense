@@ -30,18 +30,16 @@
 #include "stdafx.h"
 #include "GameApp.h"
 
-//#include "Game/AbstractObject.h"
 #include "Game/Castle.h"
+#include "Game/Container.h" 
 #include "Game/Characteristics.h"
 #include "Game/Deceleration.h"
 #include "Game/Effect.h"
-#include "Game/EffectContainer.h"
 #include "Game/Enemy.h"
 #include "Game/Lair.h"
 #include "Game/Landscape.h"
 #include "Game/Level.h"
 #include "Game/MagicTower.h"
-#include "Game/Point.h"
 #include "Game/Poisoning.h"
 #include "Game/Square.h"
 #include "Game/StandartTower.h"
@@ -123,6 +121,13 @@ GameApp& GameApp::GetInstance()
 		s_GameApp = new GameApp();
 	}
 	return *s_GameApp;
+}
+
+Vector2 GameApp::getCastlePosition(){
+	Castle* castle = castle = (Castle*)Actor::GetNamed("Castle");
+	Vector2 aim = castle->GetPosition();
+	aim.Y -= 1.43;
+	return aim;
 }
 
 AppScreen* GameApp::GetCurrentScreen()

@@ -57,16 +57,16 @@ SYSSRCS = 							\
 SRCS =								\
 	GameApp.cpp					\
 	Game/Castle.cpp			\
+	Game/Enemy.cpp			\
 	Game/Characteristics.cpp			\
 	Game/Deceleration.cpp	\
 	Game/Effect.cpp			\
-	Game/Enemy.cpp			\
+	Game/Container.cpp \
 	Game/Lair.cpp	\
 	Game/Landscape.cpp			\
 	Game/Level.cpp		\
 	Game/Tower.cpp			\
 	Game/MagicTower.cpp		\
-	Game/Point.cpp			\
 	Game/Poisoning.cpp		\
 	Game/Square.cpp		\
 	Game/StandartTower.cpp			\

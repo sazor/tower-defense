@@ -7,11 +7,11 @@
 
 #include "Enemy.h"
 #include <iostream>
-
 const int cost = 100;
 
 Enemy::Enemy(){
     health = 100;
+    damage_factor = 1;
     SetSize(MathUtil::PixelsToWorldUnits(25.0f), MathUtil::PixelsToWorldUnits(40.0f));
     SetSprite("Resources/Images/zombie_001.png");
     Tag("enemy");
@@ -23,19 +23,6 @@ Enemy::Enemy(){
     _pathIndex = 0;
 }
 
-Enemy::Enemy(Vector2 pos){
-    //Params
-    SetColor(1, 0, 0);
-    SetSize(0.75f);
-    SetPosition(pos);
-    SetDrawShape(ADS_Circle);
-    speed = 3.0f;
-    //Events
-    theSwitchboard.SubscribeTo(this, "PathPointReached");
-    _pathIndex = 0;
-    
-}
-
 Enemy::Enemy(const Enemy& orig)
 {
 }
@@ -45,8 +32,12 @@ void Enemy::Render()
     Actor::Render();
 }
 
+void Enemy::effect(std::shared_ptr<Effect> effect){
+    effects.add_with_action(effect, *this);
+}
+
 void Enemy::ReceiveMessage(Message *message){
-    if ( (message->GetMessageName() == "PathPointReached") && (message->GetSender() == this))
+    if ((message->GetMessageName() == "PathPointReached") && (message->GetSender() == this))
     {
         if (_pathIndex < _pathPoints.size() - 1)
         {
@@ -67,16 +58,6 @@ void Enemy::ReceiveMessage(Message *message){
 
 Enemy::~Enemy()
 {
-}
-
-void Enemy::setEffects(std::vector<Effect> effects)
-{
-    this->effects = effects;
-}
-
-std::vector<Effect> Enemy::getEffects() const
-{
-    return effects;
 }
 
 void Enemy::GoTo(Vector2 newDestination)
@@ -104,58 +85,32 @@ void Enemy::GetToNextPoint()
 }
 
 void Enemy::get_damage(int dmg){
-    health -= dmg;
+    health -= (dmg * damage_factor);
     if(health <= 0){
-        ConsoleLog *c = new ConsoleLog();
-        c->Printf("Death");
-        Castle* castle = (Castle*)Actor::GetNamed("Castle");
-        castle->give_cash(cost);
-        this->Untag("enemy");
-        theWorld.Remove(this);
-        Actor::Destroy();
+        die();
     }
 }
 
-void Enemy::setSpeed(float speed)
-{
-    this->speed = speed;
-}
-
-float Enemy::getSpeed() const
-{
-    return speed;
-}
-
-void Enemy::setCash(float cash)
-{
-    this->cash = cash;
-}
-
-float Enemy::getCash() const
-{
-    return cash;
-}
-
-void Enemy::setMax_health(float max_health)
-{
-    this->max_health = max_health;
-}
-
-float Enemy::getMax_health() const
-{
-    return max_health;
-}
-
-void Enemy::setHealth(float heath)
-{
-    this->health = health;
-}
-
-float Enemy::getHealth() const
-{
-    return health;
+void Enemy::die(){
+    Castle* castle = (Castle*)Actor::GetNamed("Castle");
+    castle->give_cash(cost);
+    this->Untag("enemy");
+    theWorld.Remove(this);
+    Actor::Destroy();
 }
 
 bool Enemy::change_position(Point){
     
+}
+
+void Enemy::decrease_speed(float value){
+    if(speed > 0){
+        speed -= value;
+        GoTo(GameApp::getCastlePosition());
+    }
+}
+
+void Enemy::increase_speed(float value){
+    speed += value;
+    GoTo(GameApp::getCastlePosition());
 }

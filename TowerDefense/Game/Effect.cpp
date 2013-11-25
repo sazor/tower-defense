@@ -6,7 +6,8 @@
  */
 
 #include "Effect.h"
-
+#include "Enemy.h"
+ 
 Effect::Effect()
 {
 }

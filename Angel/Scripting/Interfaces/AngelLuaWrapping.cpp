@@ -23288,7 +23288,7 @@ fail:
 }
 
 
-static int _wrap_new_Enemy__SWIG_0(lua_State* L) {
+static int _wrap_new_Enemy(lua_State* L) {
   int SWIG_arg = 0;
   Enemy *result = 0 ;
   
@@ -23302,108 +23302,6 @@ static int _wrap_new_Enemy__SWIG_0(lua_State* L) {
 fail:
   lua_error(L);
   return SWIG_arg;
-}
-
-
-static int _wrap_new_Enemy__SWIG_1(lua_State* L) {
-  int SWIG_arg = 0;
-  Vector2 arg1 ;
-  Enemy *result = 0 ;
-  
-  SWIG_check_num_args("Enemy::Enemy",1,1)
-  {
-    // Vector2 conversion
-    Vector2 *vec;
-    if (SWIG_IsOK(SWIG_ConvertPtr(L,1,(void**)&vec,SWIGTYPE_p_Vector2,0))) 
-    {
-      arg1 = *vec;
-    }
-    else
-    {
-      // convert table parameters to floats
-      lua_pushinteger(L, 1);
-      lua_gettable(L, 1);
-      float x = lua_tonumber(L, -1);
-      lua_pop(L, 1);
-      lua_pushinteger(L, 2);
-      lua_gettable(L, 1);
-      float y = lua_tonumber(L, -1);
-      lua_pop(L, 1);
-      
-      // build the vector
-      arg1 = Vector2(x, y);
-    }
-  }
-  result = (Enemy *)new Enemy(arg1);
-  SWIG_NewPointerObj(L,result,SWIGTYPE_p_Enemy,1); SWIG_arg++; 
-  return SWIG_arg;
-  
-  if(0) SWIG_fail;
-  
-fail:
-  lua_error(L);
-  return SWIG_arg;
-}
-
-
-static int _wrap_new_Enemy(lua_State* L) {
-  int argc;
-  int argv[2]={
-    1,2
-  };
-  
-  argc = lua_gettop(L);
-  if (argc == 0) {
-    return _wrap_new_Enemy__SWIG_0(L);
-  }
-  if (argc == 1) {
-    int _v;
-    {
-      // Vector2 typecheck
-      _v = 0;
-      swig_lua_userdata* usr;
-      swig_cast_info *cast;
-      usr=(swig_lua_userdata*)lua_touserdata(L,argv[0]);
-      if (usr != NULL)
-      {
-        cast=SWIG_TypeCheckStruct(usr->type, SWIGTYPE_p_Vector2);
-        if (cast)
-        {
-          _v = 1;
-        }
-      }
-      
-      if (!_v)
-      {
-        if (lua_istable(L, argv[0]) && (lua_rawlen(L, argv[0]) >= 2))
-        {
-          // verify that at least the first two elements of the table contain numbers
-          lua_pushinteger(L, 1);
-          lua_gettable(L, argv[0]);
-          int v1 = lua_isnumber(L, -1);
-          lua_pop(L, 1);
-          lua_pushinteger(L, 2);
-          lua_gettable(L, argv[0]);
-          int v2 = lua_isnumber(L, -1);
-          lua_pop(L, 1);
-          _v = (v1 && v2);
-        }
-        else
-        {
-          _v = 0;
-        }
-      }
-    }
-    if (_v) {
-      return _wrap_new_Enemy__SWIG_1(L);
-    }
-  }
-  
-  lua_pushstring(L,"Wrong arguments for overloaded function 'new_Enemy'\n"
-    "  Possible C/C++ prototypes are:\n"
-    "    Enemy::Enemy()\n"
-    "    Enemy::Enemy(Vector2)\n");
-  lua_error(L);return 0;
 }
 
 

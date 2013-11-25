@@ -11,7 +11,7 @@ const int waves = 15;
 Lair::Lair()
 {
 	rendered = false;
-	time_interval = 4;
+	time_interval = 5;
 	std::thread interval(&Lair::release_enemy, this);
 	interval.detach();
 }
@@ -22,18 +22,16 @@ Lair::Lair(const Lair& orig)
 }
 
 void Lair::release_enemy(){
-	//while(!rendered);
+	std::this_thread::sleep_for(std::chrono::seconds(3));
 	for(int i = 0; i < waves; ++i){
-		std::this_thread::sleep_for(std::chrono::seconds(time_interval));
+		std::this_thread::sleep_for(std::chrono::seconds(MathUtil::RandomIntInRange(2, time_interval)));
 		Vector2 vec = GetPosition();
 		vec.Y -= 1.25f;	
 		Enemy* enemy = (Enemy*)Actor::Create("enemy");
 		enemy->SetPosition(vec);
 		theWorld.Add(enemy, 2);
-		Vector2 aim = Vector2(-9.29f,0.71f);
-    	enemy->GoTo(aim);
+    	enemy->GoTo(GameApp::getCastlePosition());
 	}
-	Castle* castle = (Castle*)Actor::GetNamed("Castle");
 }
 
 Lair::~Lair()

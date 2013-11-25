@@ -8,8 +8,8 @@
 #include "StandartTower.h"
 #include "Enemy.h"
  
-const float radius = 3.5;
-const int time_interval = 3;
+float radius = MathUtil::PixelsToWorldUnits(180.0);
+const int time_interval = 1;
 const int dmg = 40;
 
 StandartTower::StandartTower()
@@ -19,7 +19,7 @@ StandartTower::StandartTower()
 	circle->SetPosition(this->GetPosition());
 	circle->SetColor(1.0f, 0.0f, 0.0f);
 	circle->SetDrawShape(ADS_Circle);
-	circle->SetSize(radius);
+	circle->SetSize(MathUtil::PixelsToWorldUnits(180.0));
 	circle->SetAlpha(0.5);
 	SetSprite("Resources/Images/standart_tower.png");
 	std::thread interval(&StandartTower::attack, this);
@@ -45,9 +45,9 @@ bool StandartTower::attack(){
 		Enemy* for_dmg = NULL;
         while(it != enemies.end()){
         	Vector2 en_pos = (*it)->GetPosition();
-        	Vector2 dist = Vector2(en_pos.X - pos.X, en_pos.Y - pos.Y);
-        	if (dist.Length() <= radius && dist.Length() < min_dist){
-        		min_dist = dist.Length();
+        	float dist = Vector2::DistanceSquared(en_pos, pos);
+        	if (dist <= MathUtil::PixelsToWorldUnits(180.0) && dist < min_dist){
+        		min_dist = dist;
         		for_dmg = (Enemy*)(*it); 
         	}
         	it++;
@@ -57,9 +57,11 @@ bool StandartTower::attack(){
 			circle->SetPosition(this->GetPosition());
 			circle->SetColor(0.0f, 1.0f, 0.0f);
 			circle->SetDrawShape(ADS_Circle);
-			circle->SetSize(0.5);
+			circle->SetSize(0.1);
 			theWorld.Add(circle, 3);
 			circle->MoveTo(for_dmg->GetPosition(), 0.1);
+			std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			theWorld.Remove(circle);
         	for_dmg->get_damage(dmg);
         }
 	}

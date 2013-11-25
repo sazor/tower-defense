@@ -8,7 +8,7 @@ public:
     Deceleration(const Deceleration& orig);
     virtual ~Deceleration();
     virtual void action(Enemy&);
-
+    virtual void expired(Enemy&);
 };
 
 #endif	/* DECELERATION_H */

@@ -74,6 +74,7 @@ public:
 
 	static TextActor *castle_health;
 	static TextActor *castle_cash;
+	static Vector2 getCastlePosition();
 protected:
 	GameApp();
 	AppScreen* screen;
