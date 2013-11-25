@@ -1,10 +1,3 @@
-/* 
- * File:   Lair.cpp
- * Author: Sammy Guergachi <sguergachi at gmail.com>
- * 
- * Created on October 28, 2013, 11:26 PM
- */
-
 #include "Lair.h"
 const int waves = 15;
 
@@ -36,10 +29,6 @@ void Lair::release_enemy(){
 
 Lair::~Lair()
 {
-}
-
-bool Lair::change_position(Point){
-	
 }
 
 void Lair::Render()

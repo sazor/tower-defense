@@ -74,8 +74,6 @@ void Enemy::GoTo(Vector2 newDestination)
     }
 }
 
-//Called at the start and every point in between to set up the movement to our
-// next point in the path.
 void Enemy::GetToNextPoint()
 {
     Vector2 next = _pathPoints[++_pathIndex];
@@ -84,11 +82,13 @@ void Enemy::GetToNextPoint()
     MoveTo(next, time, false, "PathPointReached");
 }
 
-void Enemy::get_damage(int dmg){
+bool Enemy::get_damage(int dmg){
     health -= (dmg * damage_factor);
     if(health <= 0){
         die();
+        return false;
     }
+    return true;
 }
 
 void Enemy::die(){
@@ -97,10 +97,6 @@ void Enemy::die(){
     this->Untag("enemy");
     theWorld.Remove(this);
     Actor::Destroy();
-}
-
-bool Enemy::change_position(Point){
-    
 }
 
 void Enemy::decrease_speed(float value){
@@ -113,4 +109,12 @@ void Enemy::decrease_speed(float value){
 void Enemy::increase_speed(float value){
     speed += value;
     GoTo(GameApp::getCastlePosition());
+}
+
+void Enemy::increase_dmg_factor(float value){
+    damage_factor *= value;
+}
+
+void Enemy::decrease_dmg_factor(float value){
+    damage_factor /= value;
 }

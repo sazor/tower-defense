@@ -57,8 +57,24 @@ bool MagicTower::attack(){
 			std::this_thread::sleep_for(std::chrono::milliseconds(100));
 			theWorld.Remove(circle);
         	for_dmg->get_damage(dmg);
-        	std::shared_ptr<Effect> ef(new Deceleration());
-        	for_dmg->effect(ef);
+        	int random_effect = MathUtil::RandomIntInRange(1, 3);
+        	switch(random_effect){
+        		case 1: { 
+        					std::shared_ptr<Effect> ef(new Poisoning());
+        					for_dmg->effect(ef);
+        					break;
+        				}
+        		case 2: {
+        					std::shared_ptr<Effect> ef(new Deceleration());
+	        				for_dmg->effect(ef);
+	        				break;
+        				}
+        		case 3: {
+        					std::shared_ptr<Effect> ef(new Weakness());
+	        				for_dmg->effect(ef);
+	        				break;
+        				}
+        	}
         }
 	}
 }

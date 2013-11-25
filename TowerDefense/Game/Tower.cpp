@@ -1,10 +1,3 @@
-/* 
- * File:   Tower.cpp
- * Author: Sammy Guergachi <sguergachi at gmail.com>
- * 
- * Created on October 28, 2013, 11:28 PM
- */
-
 #include "Tower.h"
 
 void Tower::setCharacteristics(Characteristics characteristics)
@@ -25,10 +18,6 @@ void Tower::setLevel(int level)
 int Tower::getLevel() const
 {
         return level;
-}
-
-bool Tower::change_position(Point){
-	
 }
 
 void Tower::Render()

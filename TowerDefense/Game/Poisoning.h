@@ -8,8 +8,8 @@ public:
     Poisoning(const Poisoning& orig);
     virtual ~Poisoning();
     virtual void action(Enemy&);
-private:
-
+    virtual void expired(Enemy&);
+    void damage(Enemy&);
 };
 
 #endif	/* POISONING_H */

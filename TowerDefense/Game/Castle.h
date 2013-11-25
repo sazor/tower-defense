@@ -1,6 +1,5 @@
 #ifndef CASTLE_H
 #define	CASTLE_H
-#include "Point.h"
 #include "GameApp.h"
 
 class Castle : public Actor{
@@ -11,7 +10,6 @@ public:
     void get_damage(int);
     void collapse();
     void get_cash(int);
-    virtual bool change_position(Point);
     void setCash(int cash);
     int getCash() const;
     void setMax_health(int max_health);

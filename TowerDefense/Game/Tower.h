@@ -1,7 +1,6 @@
 #ifndef TOWER_H
 #define	TOWER_H
 #include "Characteristics.h"
-#include "Point.h"
 #include "GameApp.h"
 #include <chrono>
 #include <ctime>
@@ -21,7 +20,6 @@ public:
     virtual ~Tower() { };
     void time();
     virtual bool attack() { };
-    bool change_position(Point);
     void level_up();
     void setCharacteristics(Characteristics characteristics);
     Characteristics getCharacteristics() const;

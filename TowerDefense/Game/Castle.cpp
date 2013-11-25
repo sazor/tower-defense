@@ -77,10 +77,6 @@ int Castle::getHealth() const
         return this->health;
 }
 
-bool Castle::change_position(Point){
-	
-}
-
 void Castle::Render()
 {
     Actor::Render();

@@ -2,7 +2,6 @@
 #define	LAIR_H
 #include <vector>
 #include "Enemy.h"
-#include "Point.h"
 #include "GameApp.h"
 #include <chrono>
 #include <ctime>
@@ -15,7 +14,6 @@ public:
     virtual ~Lair();
     void release_enemy();
     void time();
-    virtual bool change_position(Point);
     virtual void ReceiveMessage(Message *message);
     virtual void Render();
 private:

@@ -8,6 +8,7 @@ public:
     Weakness(const Weakness& orig);
     virtual ~Weakness();
     virtual void action(Enemy&);
+    virtual void expired(Enemy&);
 };
 
 #endif	/* WEAKNESS_H */

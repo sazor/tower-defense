@@ -63,12 +63,10 @@ SRCS =								\
 	Game/Effect.cpp			\
 	Game/Container.cpp \
 	Game/Lair.cpp	\
-	Game/Landscape.cpp			\
 	Game/Level.cpp		\
 	Game/Tower.cpp			\
 	Game/MagicTower.cpp		\
 	Game/Poisoning.cpp		\
-	Game/Square.cpp		\
 	Game/StandartTower.cpp			\
 	Game/Trap.cpp			\
 	Game/Weakness.cpp			\
@@ -81,7 +79,7 @@ OBJS = $(patsubst %.cpp,%.o,$(SRCS))
 .PHONY: clean all SWIG-Wrapper
 
 %.o: %.cpp
-	$(CXX) -c $(INCLUDE) -Wno-write-strings -Wno-deprecated -std=gnu++0x -pthread -o $@ $^
+	$(CXX) -c $(INCLUDE) -Wno-write-strings -Wno-deprecated -std=gnu++0x -pthread -o $@ $^ 
 
 all: $(TARGET)
 
