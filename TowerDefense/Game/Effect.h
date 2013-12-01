@@ -16,6 +16,7 @@ public:
     void setRemaining_time(int remaining_time);
     int getRemaining_time() const;
     virtual void expired(Enemy&) { };
+    virtual bool tick(Enemy&);
 };
 
 #endif	/* EFFECT_H */

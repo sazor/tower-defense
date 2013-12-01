@@ -22,8 +22,10 @@ StandartTower::StandartTower()
 	circle->SetSize(MathUtil::PixelsToWorldUnits(180.0));
 	circle->SetAlpha(0.2);
 	SetSprite("Resources/Images/standart_tower.png");
-	std::thread interval(&StandartTower::attack, this);
-	interval.detach();
+	theSwitchboard.SubscribeTo(this, "Tick");
+	ticks = 0;
+	//std::thread interval(&StandartTower::attack, this);
+	//interval.detach();
 }
 
 StandartTower::StandartTower(const StandartTower& orig)
@@ -36,8 +38,6 @@ StandartTower::~StandartTower()
 }
 
 bool StandartTower::attack(){
-	for(;;){
-		std::this_thread::sleep_for(std::chrono::seconds(time_interval));
 		Vector2 pos = this->GetPosition();
 		ActorSet enemies = theTagList.GetObjectsTagged("enemy");
 		ActorSet::iterator it = enemies.begin();
@@ -60,11 +60,10 @@ bool StandartTower::attack(){
 			circle->SetSize(0.1);
 			theWorld.Add(circle, 3);
 			circle->MoveTo(for_dmg->GetPosition(), 0.1);
-			std::this_thread::sleep_for(std::chrono::milliseconds(100));
-			theWorld.Remove(circle);
+			//std::this_thread::sleep_for(std::chrono::milliseconds(100));
+			//theWorld.Remove(circle);
         	for_dmg->get_damage(dmg);
         }
-	}
 }
 
 void StandartTower::Render(){
@@ -74,4 +73,12 @@ void StandartTower::Render(){
 		circle->SetPosition(this->GetPosition());	
 		theWorld.Add(circle, 1);
 	}
+}
+
+void StandartTower::ReceiveMessage(Message *message){
+    ticks++;
+    if (ticks == time_interval){
+        attack();
+        ticks = 0;
+    }
 }

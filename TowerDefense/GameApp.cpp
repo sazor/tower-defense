@@ -75,8 +75,10 @@ void AppScreen::Stop()
 	_objects.clear();
 }
 
-void AppScreen::Update(float dt) {}
-void AppScreen::Render() {}
+void AppScreen::Update(float dt) {
+}
+void AppScreen::Render() {
+}
 
 
 
@@ -104,6 +106,8 @@ GameApp::GameApp()
 	castle_cash = new TextActor("Console", "Castle cash: " + IntToString(castle->getCash()), TXT_Center);
 	castle_cash->SetPosition(Vector2(-4.5f, 3.5f));
 	theWorld.Add(castle_cash);
+	std::thread interval(&GameApp::timer, this);
+	interval.detach();
 }
 
 void GameApp::MouseDownEvent(Vec2i screenCoordinates, MouseButtonInput button)
@@ -186,7 +190,7 @@ void GameApp::ReceiveMessage(Message* message)
 
 void GameApp::Render()
 {
-	
+
 }
 
 void GameApp::SoundEnded(AngelSoundHandle sound)
@@ -210,5 +214,12 @@ void GameApp::Update(float dt)
 	{
 		tower = 3;
 		theSwitchboard.SubscribeTo(this, "MouseDown");
+	}
+}
+
+void GameApp::timer(){
+	for(;;){
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+		theSwitchboard.Broadcast(new Message("Tick", this));
 	}
 }

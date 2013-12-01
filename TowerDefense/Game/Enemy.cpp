@@ -19,6 +19,7 @@ Enemy::Enemy(){
     PlaySpriteAnimation(0.5f, SAT_Loop, 0, 2, "Anim"); 
     speed = 2.0f;
     theSwitchboard.SubscribeTo(this, "PathPointReached");
+    theSwitchboard.SubscribeTo(this, "Tick");
     _pathIndex = 0;
 }
 
@@ -52,6 +53,9 @@ void Enemy::ReceiveMessage(Message *message){
             Actor::Destroy();
         }
 
+    }
+    if(message->GetMessageName() == "Tick"){
+        effects.tick(*this);
     }
 }
 

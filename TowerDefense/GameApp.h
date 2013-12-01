@@ -83,4 +83,5 @@ protected:
 private:
 	AngelSampleHandle sample;
 	static int tower;
+	void timer();
 };

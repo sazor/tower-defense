@@ -10,6 +10,7 @@ public:
     virtual void action(Enemy&);
     virtual void expired(Enemy&);
     void damage(Enemy&);
+    virtual bool tick(Enemy&);
 };
 
 #endif	/* POISONING_H */

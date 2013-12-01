@@ -17,8 +17,8 @@ Poisoning::~Poisoning()
 }
 
 void Poisoning::action(Enemy& en){
-	std::thread interval(&Poisoning::damage, this, std::ref(en));
-	interval.detach();
+	//std::thread interval(&Poisoning::damage, this, std::ref(en));
+	//interval.detach();
 }
 
 void Poisoning::expired(Enemy& en){
@@ -31,4 +31,13 @@ void Poisoning::damage(Enemy& en){
 			break;
 		}
 	}
+}
+
+bool Poisoning::tick(Enemy& en){
+	if(remaining_time % value == 0){
+		if(!en.get_damage(damage_per_tick)){
+			remaining_time = 0;
+		}
+	}
+	Effect::tick(std::ref(en));
 }

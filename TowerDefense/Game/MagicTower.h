@@ -12,11 +12,13 @@ public:
     MagicTower();
     MagicTower(const MagicTower& orig);
     virtual ~MagicTower();
+    virtual void ReceiveMessage(Message *message);
     virtual void Render();
     Actor *circle;
 protected:
     virtual bool attack();
     bool rendered;
+    int ticks;
 };
 
 #endif	/* MAGICTOWER_H */

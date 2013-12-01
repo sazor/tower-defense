@@ -21,7 +21,12 @@ int Effect::getValue() const
 
 void Effect::setRemaining_time(int remaining_time)
 {
-        this->remaining_time = remaining_time;
+    this->remaining_time = remaining_time;
+}
+
+bool Effect::tick(Enemy&){
+	this->remaining_time -= 1;
+	return (this->remaining_time <= 0);
 }
 
 int Effect::getRemaining_time() const
