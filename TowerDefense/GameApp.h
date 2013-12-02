@@ -72,9 +72,13 @@ public:
 
 	virtual void Update(float dt);
 
+	virtual void Stop();
+
 	static TextActor *castle_health;
 	static TextActor *castle_cash;
 	static Vector2 getCastlePosition();
+	static AngelUIHandle _choiceBox;
+	static AngelUIHandle _button;
 protected:
 	GameApp();
 	AppScreen* screen;
@@ -84,4 +88,5 @@ private:
 	AngelSampleHandle sample;
 	static int tower;
 	void timer();
+	void load_prefs();
 };

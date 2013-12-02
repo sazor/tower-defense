@@ -10,8 +10,8 @@
 
 Deceleration::Deceleration()
 {
-	remaining_time = 4;
-	value = 1;
+	remaining_time = thePrefs.GetInt("EffectSettings", "DecelerationTime");
+	value = thePrefs.GetInt("EffectSettings", "DecelerationValue");
 }
 
 Deceleration::Deceleration(const Deceleration& orig)

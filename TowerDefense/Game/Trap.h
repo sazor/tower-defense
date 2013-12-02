@@ -14,6 +14,7 @@ public:
     virtual ~Trap();
     virtual void Render();
     virtual void ReceiveMessage(Message *message);
+    virtual bool level_up();
     Actor *circle;
 protected:
     virtual bool attack();

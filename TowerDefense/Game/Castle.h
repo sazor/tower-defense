@@ -1,6 +1,7 @@
 #ifndef CASTLE_H
 #define	CASTLE_H
 #include "GameApp.h"
+#include "Level.h"
 
 class Castle : public Actor{
 public:
@@ -20,6 +21,7 @@ public:
     virtual void Render();
     bool buy_tower(int);
     void give_cash(int);
+    bool buy_level(int);
 private:
     int health, max_health, cash;
     bool rendered;

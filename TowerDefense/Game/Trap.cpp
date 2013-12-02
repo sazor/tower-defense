@@ -4,8 +4,6 @@
 #include "Poisoning.h"
 #include "Weakness.h"
 
-const int dmg = 10;
-
 Trap::Trap()
 {
 	rendered = false;
@@ -13,7 +11,7 @@ Trap::Trap()
 	circle->SetPosition(this->GetPosition());
 	circle->SetColor(0.0f, 0.0f, 1.0f);
 	circle->SetDrawShape(ADS_Circle);
-	circle->SetSize(MathUtil::PixelsToWorldUnits(180.0));
+	circle->SetSize(MathUtil::PixelsToWorldUnits(Level::Radius(level)));
 	circle->SetAlpha(0.2);
 	SetSprite("Resources/Images/trap.png");
 	theSwitchboard.SubscribeTo(this, "MouseDown");
@@ -45,9 +43,9 @@ bool Trap::attack(){
     while(it != enemies.end()){
         Vector2 en_pos = (*it)->GetPosition();
         float dist = Vector2::DistanceSquared(en_pos, pos);
-        if (dist <= MathUtil::PixelsToWorldUnits(180.0)){
+        if (dist <= MathUtil::PixelsToWorldUnits(Level::Radius(level))){
         	for_dmg = (Enemy*)(*it); 
-        	for_dmg->get_damage(dmg);
+        	for_dmg->get_damage(thePrefs.GetFloat("TowerSettings", "TrapDmg"));
         	int random_effect = MathUtil::RandomIntInRange(1, 3);
         	switch(random_effect){
         		case 1: { 
@@ -87,4 +85,10 @@ void Trap::ReceiveMessage(Message *message){
 	    	attack();
 	    }
     }
+}
+
+bool Trap::level_up(){
+    bool res = Tower::level_up();
+    circle->SetSize(MathUtil::PixelsToWorldUnits(Level::Radius(level)));
+    return res;
 }

@@ -22,6 +22,8 @@ public:
     void increase_dmg_factor(float);
     void increase_speed(float);
     void decrease_dmg_factor(float);
+    float getHealth();
+    float getSpeed();
 private:
     float health, max_health, cash, speed;
     Container<std::shared_ptr<Effect>> effects;

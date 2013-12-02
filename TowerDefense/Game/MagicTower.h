@@ -15,8 +15,10 @@ public:
     virtual void ReceiveMessage(Message *message);
     virtual void Render();
     Actor *circle;
+    virtual bool level_up();
 protected:
     virtual bool attack();
+    void delete_circle(Actor*);
     bool rendered;
     int ticks;
 };

@@ -1,5 +1,4 @@
 #include "Lair.h"
-const int waves = 15;
 
 Lair::Lair()
 {
@@ -16,8 +15,8 @@ Lair::Lair(const Lair& orig)
 
 void Lair::release_enemy(){
 	std::this_thread::sleep_for(std::chrono::seconds(3));
-	for(int i = 0; i < waves; ++i){
-		std::this_thread::sleep_for(std::chrono::seconds(MathUtil::RandomIntInRange(2, time_interval)));
+	for(int i = 0; i < thePrefs.GetInt("LairSettings", "Waves"); ++i){
+		std::this_thread::sleep_for(std::chrono::seconds(MathUtil::RandomIntInRange(2, thePrefs.GetInt("LairSettings", "TimeInterval"))));
 		Vector2 vec = GetPosition();
 		vec.Y -= 1.25f;	
 		Enemy* enemy = (Enemy*)Actor::Create("enemy");

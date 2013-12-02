@@ -5,15 +5,12 @@
  * Created on October 28, 2013, 11:30 PM
  */
 #include "Castle.h"
-const int standart_cost = 100;
-const int magic_cost = 150;
-const int trap_cost = 150;
 Castle::Castle()
 {
     rendered = false;
-    this->max_health = 100;
+    this->max_health = thePrefs.GetFloat("CastleSettings", "MaxHealth");
     this->health = max_health;
-    this->cash = 500;
+    this->cash = thePrefs.GetFloat("CastleSettings", "Cash");
 }
 
 Castle::Castle(const Castle& orig)
@@ -24,14 +21,18 @@ Castle::~Castle()
 {
 }
 
+bool Castle::buy_level(int cost){
+    if(cash >= cost){
+        cash -= cost;
+        GameApp::castle_cash->SetDisplayString("Castle cash: " + IntToString(cash));
+        return true;
+    }
+    return false;
+}
+
 bool Castle::buy_tower(int type){
     //1 - standart tower, 2 - magic tower, 3 - trap
-    int cost = 0;
-    switch(type){
-        case 1: cost = standart_cost; break;
-        case 2: cost = magic_cost; break;
-        case 3: cost = trap_cost; break;
-    }
+    int cost = Level::Cost(1);
     if(cash >= cost){
         cash -= cost;
         GameApp::castle_cash->SetDisplayString("Castle cash: " + IntToString(cash));

@@ -1,11 +1,10 @@
 #include "Poisoning.h"
 #include "Enemy.h"
-const float damage_per_tick = 50.0;
 
 Poisoning::Poisoning()
 {
-	remaining_time = 6;
-	value = 2;
+	remaining_time = thePrefs.GetInt("EffectSettings", "PoisoningTime");
+	value = thePrefs.GetInt("EffectSettings", "PoisoningValue");
 }
 
 Poisoning::Poisoning(const Poisoning& orig)
@@ -27,7 +26,7 @@ void Poisoning::expired(Enemy& en){
 void Poisoning::damage(Enemy& en){
 	for(int i = 0; i < remaining_time/value; ++i){
 		std::this_thread::sleep_for(std::chrono::seconds(value));
-		if(!en.get_damage(damage_per_tick)){
+		if(!en.get_damage(thePrefs.GetFloat("EffectSettings", "PoisoningDmg"))){
 			break;
 		}
 	}
@@ -35,7 +34,7 @@ void Poisoning::damage(Enemy& en){
 
 bool Poisoning::tick(Enemy& en){
 	if(remaining_time % value == 0){
-		if(!en.get_damage(damage_per_tick)){
+		if(!en.get_damage(thePrefs.GetFloat("EffectSettings", "PoisoningDmg"))){
 			remaining_time = 0;
 		}
 	}

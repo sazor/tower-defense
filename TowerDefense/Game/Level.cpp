@@ -6,66 +6,26 @@
  */
 
 #include "Level.h"
+std::vector<Lev> Level::levels;
 
-Level::Level()
-{
+void Level::addLevel(float radius, int cost){
+	Lev new_lev(radius, cost);
+    levels.push_back(new_lev);
 }
 
-Level::Level(const Level& orig)
-{
+void Level::setLevel(int level, float radius, int cost){
+	levels[level-1].radius = radius;
+	levels[level-1].cost = cost;
 }
 
-Level::~Level()
-{
+int Level::Cost(int level){
+	return levels[level-1].cost;
 }
 
-void Level::SetEffect(Effect effect)
-{
-        this->effect = effect;
+float Level::Radius(int level){
+	return levels[level-1].radius;
 }
 
-Effect Level::GetEffect() const
-{
-        return effect;
+int Level::MaxLevel(){
+	return levels.size();
 }
-
-void Level::SetSpeed(int speed)
-{
-        this->speed = speed;
-}
-
-int Level::GetSpeed() const
-{
-        return speed;
-}
-
-void Level::SetDamage(int damage)
-{
-        this->damage = damage;
-}
-
-int Level::GetDamage() const
-{
-        return damage;
-}
-
-void Level::SetRadius(int radius)
-{
-        this->radius = radius;
-}
-
-int Level::GetRadius() const
-{
-        return radius;
-}
-
-void Level::SetCost(int cost)
-{
-        this->cost = cost;
-}
-
-int Level::GetCost() const
-{
-        return cost;
-}
-

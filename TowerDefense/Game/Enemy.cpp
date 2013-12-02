@@ -7,17 +7,18 @@
 
 #include "Enemy.h"
 #include <iostream>
-const int cost = 100;
 
 Enemy::Enemy(){
-    health = 100;
+    cash = thePrefs.GetFloat("EnemySettings", "Cost");
+    max_health = thePrefs.GetFloat("EnemySettings", "MaxHealth");
+    health = max_health;
+    speed = thePrefs.GetFloat("EnemySettings", "Speed");
     damage_factor = 1;
     SetSize(MathUtil::PixelsToWorldUnits(25.0f), MathUtil::PixelsToWorldUnits(40.0f));
     SetSprite("Resources/Images/zombie_001.png");
     Tag("enemy");
     LoadSpriteFrames("Resources/Images/zombie_001.png");
     PlaySpriteAnimation(0.5f, SAT_Loop, 0, 2, "Anim"); 
-    speed = 2.0f;
     theSwitchboard.SubscribeTo(this, "PathPointReached");
     theSwitchboard.SubscribeTo(this, "Tick");
     _pathIndex = 0;
@@ -96,7 +97,7 @@ bool Enemy::get_damage(int dmg){
 
 void Enemy::die(){
     Castle* castle = (Castle*)Actor::GetNamed("Castle");
-    castle->give_cash(cost);
+    castle->give_cash(cash);
     this->Untag("enemy");
     theWorld.Remove(this);
     Actor::Destroy();
@@ -120,4 +121,12 @@ void Enemy::increase_dmg_factor(float value){
 
 void Enemy::decrease_dmg_factor(float value){
     damage_factor /= value;
+}
+
+float Enemy::getHealth(){
+    return this->health;
+}
+
+float Enemy::getSpeed(){
+    return this->speed;
 }

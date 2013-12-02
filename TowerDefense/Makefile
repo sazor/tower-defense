@@ -58,7 +58,6 @@ SRCS =								\
 	GameApp.cpp					\
 	Game/Castle.cpp			\
 	Game/Enemy.cpp			\
-	Game/Characteristics.cpp			\
 	Game/Deceleration.cpp	\
 	Game/Effect.cpp			\
 	Game/Container.cpp \

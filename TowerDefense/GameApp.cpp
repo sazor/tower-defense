@@ -32,7 +32,6 @@
 
 #include "Game/Castle.h"
 #include "Game/Container.h" 
-#include "Game/Characteristics.h"
 #include "Game/Deceleration.h"
 #include "Game/Effect.h"
 #include "Game/Enemy.h"
@@ -45,7 +44,25 @@
 #include "Game/Trap.h"
 #include "Game/Weakness.h" 
 #include "stdafx.h"
+#include <fstream>
 
+void ChoiceMade(int choice)
+{
+	ConsoleLog *c = new ConsoleLog();
+	c->Printf("Change tactics to %d. ", choice);
+	thePrefs.SetInt("PlayerSettings", "Tactics", choice);
+}
+
+void ButtonPress(){
+	StringList labels;
+	labels.push_back("Nearest to tower");
+	labels.push_back("Nearest to castle");
+	labels.push_back("Weakest");
+	labels.push_back("Strongest");
+	labels.push_back("Fastest");
+	labels.push_back("Slowest");
+	GameApp::_choiceBox = theUI.ShowChoiceBox("Choose your tactics:", labels, ChoiceMade);
+}
 
 
 AppScreen::AppScreen() {}
@@ -86,9 +103,12 @@ GameApp* GameApp::s_GameApp = NULL;
 int GameApp::tower;
 TextActor * GameApp::castle_health;
 TextActor * GameApp::castle_cash;
+AngelUIHandle GameApp::_choiceBox = NULL;
+AngelUIHandle GameApp::_button = NULL;
 
 GameApp::GameApp()
 {	
+	load_prefs();
 	theSound.SetSoundCallback(this, &GameManager::SoundEnded);
 	screen = new AppScreen();
 	sample = theSound.LoadSample("Resources/Sounds/click.ogg", false /*no stream*/);
@@ -98,7 +118,6 @@ GameApp::GameApp()
 	theWorld.LoadLevel("level");
 	BoundingBox bounds(Vector2(-20, -20), Vector2(20, 20));
 	theSpatialGraph.CreateGraph(0.6f, bounds);
-	theSpatialGraph.EnableDrawGraph(true);
 	Castle* castle = (Castle*)Actor::GetNamed("Castle");
 	castle_health = new TextActor("Console", "Castle health: " + IntToString(castle->getHealth()), TXT_Center);
 	castle_health->SetPosition(Vector2(-4.5f, 4.5f));
@@ -108,6 +127,7 @@ GameApp::GameApp()
 	theWorld.Add(castle_cash);
 	std::thread interval(&GameApp::timer, this);
 	interval.detach();
+	_button = theUI.AddButton("Change tactics", Vec2i(90, 700), ButtonPress, true);
 }
 
 void GameApp::MouseDownEvent(Vec2i screenCoordinates, MouseButtonInput button)
@@ -222,4 +242,46 @@ void GameApp::timer(){
 		std::this_thread::sleep_for(std::chrono::seconds(1));
 		theSwitchboard.Broadcast(new Message("Tick", this));
 	}
+}
+
+void GameApp::load_prefs(){
+	//default tactics
+	thePrefs.SetInt("PlayerSettings", "Tactics", 0);
+	//load tower levels
+	std::ifstream fin("Data/levels.dat");
+	while(!fin.eof()){
+		float radius;
+		int cost;
+		fin >> cost >> radius;
+		Level::addLevel(radius, cost);
+	}
+	fin.close();
+	//Time_intervals & dmg of towers
+	thePrefs.SetFloat("TowerSettings", "MagicTime", 3.0);
+	thePrefs.SetFloat("TowerSettings", "StandartTime", 1.0);
+	thePrefs.SetFloat("TowerSettings", "MagicDmg", 10.0);
+	thePrefs.SetFloat("TowerSettings", "StandartDmg", 40.0);
+	thePrefs.SetFloat("TowerSettings", "TrapDmg", 15.0);
+	//Enemy settings
+	thePrefs.SetFloat("EnemySettings", "Cost", 100.0);
+	thePrefs.SetFloat("EnemySettings", "MaxHealth", 100.0);
+	thePrefs.SetFloat("EnemySettings", "Speed", 2.0);
+	//Castle settings
+	thePrefs.SetFloat("CastleSettings", "Cash", 500.0);
+	thePrefs.SetFloat("CastleSettings", "MaxHealth", 100.0);
+	//Lair settings
+	thePrefs.SetInt("LairSettings", "Waves", 15);
+	thePrefs.SetInt("LairSettings", "TimeInterval", 5);
+	//Effect settings
+	thePrefs.SetInt("EffectSettings", "PoisoningTime", 6);
+	thePrefs.SetInt("EffectSettings", "PoisoningValue", 2);
+	thePrefs.SetFloat("EffectSettings", "PoisoningDmg", 50.0);
+	thePrefs.SetInt("EffectSettings", "WeaknessTime", 5);
+	thePrefs.SetInt("EffectSettings", "WeaknessValue", 2);
+	thePrefs.SetInt("EffectSettings", "DecelerationTime", 4);
+	thePrefs.SetInt("EffectSettings", "DecelerationValue", 1);
+}
+
+void GameApp::Stop(){
+
 }

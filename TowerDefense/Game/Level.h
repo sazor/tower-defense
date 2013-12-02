@@ -1,25 +1,22 @@
 #ifndef LEVEL_H
 #define	LEVEL_H
-#include "Effect.h"
+#include <vector>
+
+struct Lev {
+    float radius;
+    int cost;
+    Lev(float _rad, int _cost):radius(_rad), cost(_cost){};
+};
 
 class Level {
 public:
-    Level();
-    Level(const Level& orig);
-    virtual ~Level();
-    void SetEffect(Effect effect);
-    Effect GetEffect() const;
-    void SetSpeed(int speed);
-    int GetSpeed() const;
-    void SetDamage(int damage);
-    int GetDamage() const;
-    void SetRadius(int radius);
-    int GetRadius() const;
-    void SetCost(int cost);
-    int GetCost() const;
+    static void addLevel(float, int);
+    static void setLevel(int, float, int);
+    static int Cost(int);
+    static float Radius(int);
+    static int MaxLevel();
 private:
-    int cost, radius, damage, speed;
-    Effect effect;
+    static std::vector<Lev> levels;
 };
 
 #endif	/* LEVEL_H */

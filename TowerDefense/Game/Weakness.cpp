@@ -3,8 +3,8 @@
 
 Weakness::Weakness()
 {
-	remaining_time = 5;
-	value = 2;
+	remaining_time = thePrefs.GetInt("EffectSettings", "WeaknessTime");
+	value = thePrefs.GetInt("EffectSettings", "WeaknessValue");
 }
 
 Weakness::Weakness(const Weakness& orig)
